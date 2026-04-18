@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import icon from '../assets/icon.png';
+
+const year = new Date().getFullYear();
+---
+
+<Base>
+  <main id="main">
+    <article class="hero">
+      <Image
+        class="hero__icon"
+        src={icon}
+        alt=""
+        width={320}
+        height={320}
+        densities={[1, 2]}
+        loading="eager"
+        fetchpriority="high"
+        decoding="sync"
+      />
+      <h1 class="hero__title">So Sketchy</h1>
+    </article>
+  </main>
+  <footer>
+    <small>&copy; <span id="year">{year}</span> <a href="https://www.splitleaf.net">Splitleaf, LLC</a></small>
+  </footer>
+  <script is:inline>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</Base>

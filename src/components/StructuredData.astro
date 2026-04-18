@@ -1,0 +1,35 @@
+---
+const site = 'https://sosketchy.app';
+
+const graph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${site}/#org`,
+      name: 'Splitleaf',
+      url: site,
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${site}/#site`,
+      url: site,
+      name: 'So Sketchy',
+      inLanguage: 'en',
+      publisher: { '@id': `${site}/#org` },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': `${site}/#app`,
+      name: 'So Sketchy',
+      applicationCategory: 'GameApplication',
+      operatingSystem: 'iOS 17',
+      url: site,
+      image: `${site}/og-image.png`,
+      creator: { '@id': `${site}/#org` },
+    },
+  ],
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(graph)}></script>
