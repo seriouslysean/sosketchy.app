@@ -1,4 +1,2 @@
 User-agent: *
 Disallow: /g
-
-Sitemap: https://sosketchy.app/sitemap.xml
