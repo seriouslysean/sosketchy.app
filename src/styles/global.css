@@ -48,13 +48,7 @@
   html {
     font-family: var(--font-sans);
     color: var(--ink);
-    background:
-      radial-gradient(
-        ellipse at 50% 40%,
-        var(--paper) 0%,
-        color-mix(in oklab, var(--paper) 88%, var(--stone)) 100%
-      )
-      fixed no-repeat;
+    background: var(--paper);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
