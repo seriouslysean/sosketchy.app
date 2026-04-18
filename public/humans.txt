@@ -1,0 +1,12 @@
+/* TEAM */
+
+Developer: Sean Kennedy
+Contact: sean [at] codeserious.com
+Site: https://sosketchy.app
+
+/* SITE */
+
+Last update: 2026
+Standards: HTML5, CSS3
+Components: Astro
+Hosting: GitHub Pages
