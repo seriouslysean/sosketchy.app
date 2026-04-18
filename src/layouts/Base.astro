@@ -14,9 +14,8 @@ const {
   noindex = false,
 } = Astro.props;
 
-const site = 'https://sosketchy.app';
-const canonical = new URL(Astro.url.pathname, site).href;
-const ogImage = `${site}/og-image.png`;
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL('/og-image.png', Astro.site).href;
 ---
 
 <!doctype html>
@@ -31,13 +30,8 @@ const ogImage = `${site}/og-image.png`;
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="color-scheme" content="light" />
     <meta name="theme-color" content="#C75B6A" />
-    <meta name="apple-mobile-web-app-title" content="So Sketchy" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />

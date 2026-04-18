@@ -7,18 +7,23 @@
     box-sizing: border-box;
   }
 
-  :where(html, body, h1, p, figure) {
+  html,
+  body,
+  h1,
+  p,
+  figure {
     margin: 0;
     padding: 0;
   }
 
-  :where(img, picture) {
+  img,
+  picture {
     display: block;
     max-inline-size: 100%;
     block-size: auto;
   }
 
-  :where(a) {
+  a {
     color: inherit;
   }
 }
@@ -43,7 +48,13 @@
   html {
     font-family: var(--font-sans);
     color: var(--ink);
-    background: var(--paper);
+    background:
+      radial-gradient(
+        ellipse at 50% 40%,
+        var(--paper) 0%,
+        color-mix(in oklab, var(--paper) 88%, var(--stone)) 100%
+      )
+      fixed no-repeat;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -123,7 +134,7 @@
     border-radius: clamp(1.25rem, 4vw, 1.75rem);
     box-shadow:
       0 1px 2px rgb(0 0 0 / 0.04),
-      0 8px 24px -6px rgb(199 91 106 / 0.25);
+      0 8px 24px -6px rgb(from var(--coral) r g b / 0.25);
   }
 
   .hero__title {
