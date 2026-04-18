@@ -1,0 +1,26 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+
+# environment
+.env
+.env.local
+.env.production
+
+# macOS
+.DS_Store
+
+# editors
+.vscode/
+.idea/
+
+# local Claude settings
+.claude/settings.local.json
