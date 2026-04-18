@@ -22,12 +22,14 @@ jobs:
 
       - uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version-file: .nvmrc
           cache: npm
 
       - run: npm ci
 
       - run: npm run build
+        env:
+          SITE_URL: ${{ vars.SITE_URL || 'https://sosketchy.app' }}
 
       - uses: actions/configure-pages@v5
 
