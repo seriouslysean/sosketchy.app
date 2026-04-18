@@ -1,5 +1,5 @@
 ---
-const site = 'https://sosketchy.app';
+const site = Astro.site!.href.replace(/\/$/, '');
 
 const graph = {
   '@context': 'https://schema.org',
