@@ -50,9 +50,10 @@
     color: var(--ink);
     background:
       radial-gradient(
-        ellipse at 50% 40%,
+        ellipse 85% 75% at 50% 45%,
         var(--paper) 0%,
-        color-mix(in oklab, var(--paper) 88%, var(--stone)) 100%
+        var(--paper) 25%,
+        color-mix(in oklab, var(--paper) 55%, var(--stone)) 100%
       )
       fixed no-repeat;
     line-height: 1.5;
