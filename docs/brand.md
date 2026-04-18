@@ -17,8 +17,6 @@ Light-only on the site to match the app's default appearance.
 
 ## Contrast
 
-All pairings meet WCAG 2.2 AA.
-
 | Foreground | Background | Ratio | Pass |
 |---|---|---|---|
 | Ink on Paper | `#1C1917` / `#FAF9F7` | ~18:1 | AAA |
