@@ -1,15 +1,11 @@
 import type { APIRoute } from 'astro';
+import { getFullUrl, getUrl } from '../utils/url-utils';
 
-export const GET: APIRoute = ({ site }) => {
-  if (!site) {
-    throw new Error('Astro site is required to build robots.txt.');
-  }
-
-  const sitemap = new URL('/sitemap.xml', site).href;
+export const GET: APIRoute = () => {
   const body = `User-agent: *
-Disallow: /g
+Disallow: ${getUrl('/g')}
 
-Sitemap: ${sitemap}
+Sitemap: ${getFullUrl('/sitemap-index.xml')}
 `;
 
   return new Response(body, {

@@ -1,34 +1,35 @@
 ---
 import { PUBLIC_APP_NAME, PUBLIC_BUSINESS_NAME } from 'astro:env/client';
+import { getFullUrl } from '../utils/url-utils';
 
-const site = Astro.site!.href.replace(/\/$/, '');
+const siteRoot = getFullUrl('/').replace(/\/$/, '');
 
 const graph = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': `${site}/#org`,
+      '@id': `${siteRoot}/#org`,
       name: PUBLIC_BUSINESS_NAME,
-      url: site,
+      url: siteRoot,
     },
     {
       '@type': 'WebSite',
-      '@id': `${site}/#site`,
-      url: site,
+      '@id': `${siteRoot}/#site`,
+      url: siteRoot,
       name: PUBLIC_APP_NAME,
       inLanguage: 'en',
-      publisher: { '@id': `${site}/#org` },
+      publisher: { '@id': `${siteRoot}/#org` },
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': `${site}/#app`,
+      '@id': `${siteRoot}/#app`,
       name: PUBLIC_APP_NAME,
       applicationCategory: 'GameApplication',
       operatingSystem: 'iOS 17',
-      url: site,
-      image: `${site}/og-image.png`,
-      creator: { '@id': `${site}/#org` },
+      url: siteRoot,
+      image: getFullUrl('/og-image.png'),
+      creator: { '@id': `${siteRoot}/#org` },
     },
   ],
 };

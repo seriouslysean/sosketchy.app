@@ -1,5 +1,6 @@
 ---
 import Doc from '../layouts/Doc.astro';
+import SiteLink from '../components/SiteLink.astro';
 import {
   PUBLIC_APP_NAME,
   PUBLIC_BUSINESS_NAME,
@@ -62,12 +63,11 @@ const effectiveDate = 'April 20, 2026';
     <p>
       Analytics are processed by TelemetryDeck GmbH, Von-der-Tann-Str.
       54, 86159 Augsburg, Germany. See their policy at
-      <a
+      <SiteLink
         href="https://telemetrydeck.com/privacy"
         target="_blank"
-        rel="noopener noreferrer"
         aria-label="TelemetryDeck privacy policy, opens in new tab"
-      >telemetrydeck.com/privacy</a>. We require TelemetryDeck to
+      >telemetrydeck.com/privacy</SiteLink>. We require TelemetryDeck to
       protect your data at the same standard described in this policy.
     </p>
   </section>
@@ -119,7 +119,7 @@ const effectiveDate = 'April 20, 2026';
     <h2>Contact</h2>
     <p>
       Data controller: {PUBLIC_BUSINESS_NAME}. Questions about this
-      policy: <a href={`mailto:${PUBLIC_SUPPORT_EMAIL}`}>{PUBLIC_SUPPORT_EMAIL}</a>.
+      policy: <SiteLink href={`mailto:${PUBLIC_SUPPORT_EMAIL}`}>{PUBLIC_SUPPORT_EMAIL}</SiteLink>.
     </p>
   </section>
 </Doc>

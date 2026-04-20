@@ -1,5 +1,6 @@
 ---
 import Doc from '../layouts/Doc.astro';
+import SiteLink from '../components/SiteLink.astro';
 import { PUBLIC_APP_NAME, PUBLIC_SUPPORT_EMAIL } from 'astro:env/client';
 ---
 
@@ -52,7 +53,7 @@ import { PUBLIC_APP_NAME, PUBLIC_SUPPORT_EMAIL } from 'astro:env/client';
   </section>
 
   <p class="doc__aside">
-    Data practices are covered in the <a href="/privacy">privacy policy</a>.
-    Still stuck? Email <a href={`mailto:${PUBLIC_SUPPORT_EMAIL}`}>{PUBLIC_SUPPORT_EMAIL}</a>.
+    Data practices are covered in the <SiteLink href="/privacy">privacy policy</SiteLink>.
+    Still stuck? Email <SiteLink href={`mailto:${PUBLIC_SUPPORT_EMAIL}`}>{PUBLIC_SUPPORT_EMAIL}</SiteLink>.
   </p>
 </Doc>
