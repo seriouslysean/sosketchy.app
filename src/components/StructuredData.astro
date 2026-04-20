@@ -1,5 +1,5 @@
 ---
-import { PUBLIC_APP_NAME, PUBLIC_BUSINESS_NAME } from 'astro:env/client';
+import { APP_NAME, BUSINESS_NAME } from 'astro:env/client';
 import { getFullUrl } from '../utils/url-utils';
 
 const siteRoot = getFullUrl('/').replace(/\/$/, '');
@@ -10,21 +10,21 @@ const graph = {
     {
       '@type': 'Organization',
       '@id': `${siteRoot}/#org`,
-      name: PUBLIC_BUSINESS_NAME,
+      name: BUSINESS_NAME,
       url: siteRoot,
     },
     {
       '@type': 'WebSite',
       '@id': `${siteRoot}/#site`,
       url: siteRoot,
-      name: PUBLIC_APP_NAME,
+      name: APP_NAME,
       inLanguage: 'en',
       publisher: { '@id': `${siteRoot}/#org` },
     },
     {
       '@type': 'SoftwareApplication',
       '@id': `${siteRoot}/#app`,
-      name: PUBLIC_APP_NAME,
+      name: APP_NAME,
       applicationCategory: 'GameApplication',
       operatingSystem: 'iOS 17',
       url: siteRoot,

@@ -1,12 +1,12 @@
 import type { APIRoute } from 'astro';
-import { PUBLIC_APP_NAME } from 'astro:env/client';
+import { APP_NAME } from 'astro:env/client';
 import { getUrl } from '../utils/url-utils';
 
 export const GET: APIRoute = () => {
   const manifest = {
-    name: PUBLIC_APP_NAME,
-    short_name: PUBLIC_APP_NAME,
-    description: `${PUBLIC_APP_NAME}, an iMessage game.`,
+    name: APP_NAME,
+    short_name: APP_NAME,
+    description: `${APP_NAME}, an iMessage game.`,
     start_url: getUrl('/'),
     scope: getUrl('/'),
     display: 'browser',

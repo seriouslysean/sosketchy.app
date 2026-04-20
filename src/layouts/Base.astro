@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import StructuredData from '../components/StructuredData.astro';
-import { PUBLIC_APP_NAME } from 'astro:env/client';
+import { APP_NAME } from 'astro:env/client';
 import { getFullUrl, getUrl } from '../utils/url-utils';
 
 interface Props {
@@ -11,8 +11,8 @@ interface Props {
 }
 
 const {
-  title = PUBLIC_APP_NAME,
-  description = `${PUBLIC_APP_NAME}, an iMessage game.`,
+  title = APP_NAME,
+  description = `${APP_NAME}, an iMessage game.`,
   noindex = false,
 } = Astro.props;
 
@@ -37,7 +37,7 @@ const ogImage = getFullUrl('/og-image.png');
     <meta name="color-scheme" content="light" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content={PUBLIC_APP_NAME} />
+    <meta name="apple-mobile-web-app-title" content={APP_NAME} />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
     <link rel="icon" type="image/png" sizes="32x32" href={getUrl('/favicon-32.png')} />
@@ -46,7 +46,7 @@ const ogImage = getFullUrl('/og-image.png');
     <link rel="manifest" href={getUrl('/manifest.webmanifest')} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content={PUBLIC_APP_NAME} />
+    <meta property="og:site_name" content={APP_NAME} />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -54,14 +54,14 @@ const ogImage = getFullUrl('/og-image.png');
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="1024" />
-    <meta property="og:image:alt" content={`${PUBLIC_APP_NAME} app icon`} />
+    <meta property="og:image:alt" content={`${APP_NAME} app icon`} />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    <meta name="twitter:image:alt" content={`${PUBLIC_APP_NAME} app icon`} />
+    <meta name="twitter:image:alt" content={`${APP_NAME} app icon`} />
 
     <StructuredData />
   </head>

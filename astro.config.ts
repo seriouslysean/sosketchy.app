@@ -25,12 +25,12 @@ export default defineConfig({
   ],
   env: {
     schema: {
-      PUBLIC_APP_NAME: envField.string({ context: 'client', access: 'public' }),
-      PUBLIC_BUSINESS_NAME: envField.string({ context: 'client', access: 'public' }),
-      PUBLIC_BUSINESS_URL: envField.string({ context: 'client', access: 'public' }),
-      PUBLIC_SUPPORT_EMAIL: envField.string({ context: 'client', access: 'public' }),
       SITE_URL: envField.string({ context: 'client', access: 'public' }),
       BASE_PATH: envField.string({ context: 'client', access: 'public', default: '/' }),
+      APP_NAME: envField.string({ context: 'client', access: 'public', default: 'So Sketchy' }),
+      BUSINESS_NAME: envField.string({ context: 'client', access: 'public', default: 'Splitleaf, LLC' }),
+      BUSINESS_URL: envField.string({ context: 'client', access: 'public', default: 'https://www.splitleaf.net' }),
+      SUPPORT_EMAIL: envField.string({ context: 'client', access: 'public', default: 'support@sosketchy.app' }),
     },
   },
 });

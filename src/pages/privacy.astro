@@ -2,17 +2,17 @@
 import Doc from '../layouts/Doc.astro';
 import SiteLink from '../components/SiteLink.astro';
 import {
-  PUBLIC_APP_NAME,
-  PUBLIC_BUSINESS_NAME,
-  PUBLIC_SUPPORT_EMAIL,
+  APP_NAME,
+  BUSINESS_NAME,
+  SUPPORT_EMAIL,
 } from 'astro:env/client';
 
 const effectiveDate = 'April 20, 2026';
 ---
 
 <Doc
-  title={`Privacy | ${PUBLIC_APP_NAME}`}
-  description={`How ${PUBLIC_APP_NAME} handles data. Anonymous analytics via TelemetryDeck, nothing else.`}
+  title={`Privacy | ${APP_NAME}`}
+  description={`How ${APP_NAME} handles data. Anonymous analytics via TelemetryDeck, nothing else.`}
 >
   <header class="doc__header">
     <h1>Privacy</h1>
@@ -20,8 +20,8 @@ const effectiveDate = 'April 20, 2026';
   </header>
 
   <p>
-    This policy covers {PUBLIC_APP_NAME}, an async iMessage game
-    published by {PUBLIC_BUSINESS_NAME}. The game has no server of its
+    This policy covers {APP_NAME}, an async iMessage game
+    published by {BUSINESS_NAME}. The game has no server of its
     own. Drawings and gameplay state are encoded into the iMessage URL
     and travel directly between players, so we cannot see, store, or
     access them. In-app purchases are processed by Apple. The only
@@ -129,7 +129,7 @@ const effectiveDate = 'April 20, 2026';
   <section>
     <h2>Children's privacy</h2>
     <p>
-      {PUBLIC_APP_NAME} is not directed at children under 13 and does
+      {APP_NAME} is not directed at children under 13 and does
       not knowingly collect personal information from them.
     </p>
   </section>
@@ -146,8 +146,8 @@ const effectiveDate = 'April 20, 2026';
   <section>
     <h2>Contact</h2>
     <p>
-      Data controller: {PUBLIC_BUSINESS_NAME}. Questions about this
-      policy: <SiteLink href={`mailto:${PUBLIC_SUPPORT_EMAIL}`}>{PUBLIC_SUPPORT_EMAIL}</SiteLink>&#8288;.
+      Data controller: {BUSINESS_NAME}. Questions about this
+      policy: <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
     </p>
   </section>
 </Doc>

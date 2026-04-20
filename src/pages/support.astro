@@ -1,17 +1,17 @@
 ---
 import Doc from '../layouts/Doc.astro';
 import SiteLink from '../components/SiteLink.astro';
-import { PUBLIC_APP_NAME, PUBLIC_SUPPORT_EMAIL } from 'astro:env/client';
+import { APP_NAME, SUPPORT_EMAIL } from 'astro:env/client';
 ---
 
 <Doc
-  title={`Support | ${PUBLIC_APP_NAME}`}
-  description={`Help with ${PUBLIC_APP_NAME}, answers to common questions, and how to report a drawing.`}
+  title={`Support | ${APP_NAME}`}
+  description={`Help with ${APP_NAME}, answers to common questions, and how to report a drawing.`}
 >
   <header class="doc__header">
     <h1>Support</h1>
     <p>
-      {PUBLIC_APP_NAME} is an async drawing game that lives inside
+      {APP_NAME} is an async drawing game that lives inside
       iMessage. Draw a word, send it, and let your friend guess whenever
       they pick up their phone.
     </p>
@@ -23,13 +23,13 @@ import { PUBLIC_APP_NAME, PUBLIC_SUPPORT_EMAIL } from 'astro:env/client';
     <h3>How do I install it?</h3>
     <p>
       Open a Messages thread, tap the App Store icon in the iMessage app
-      drawer, search for {PUBLIC_APP_NAME}, and tap it to enable the
+      drawer, search for {APP_NAME}, and tap it to enable the
       game inside iMessage.
     </p>
 
     <h3>How do I play?</h3>
     <p>
-      Open {PUBLIC_APP_NAME} from the app drawer in any Messages thread,
+      Open {APP_NAME} from the app drawer in any Messages thread,
       draw the prompt you are given, and send it back into the
       conversation for the other player to guess.
     </p>
@@ -43,7 +43,7 @@ import { PUBLIC_APP_NAME, PUBLIC_SUPPORT_EMAIL } from 'astro:env/client';
 
     <h3>Where did my purchased pack go?</h3>
     <p>
-      Open the pack screen inside {PUBLIC_APP_NAME} and tap Restore
+      Open the pack screen inside {APP_NAME} and tap Restore
       Purchases, then confirm under Settings, Apple ID, Subscriptions
       that you are signed in with the Apple ID that bought the pack.
     </p>
@@ -57,6 +57,6 @@ import { PUBLIC_APP_NAME, PUBLIC_SUPPORT_EMAIL } from 'astro:env/client';
 
   <p class="doc__aside">
     Data practices are covered in the <SiteLink href="/privacy">privacy policy</SiteLink>&#8288;.
-    Still stuck? Email <SiteLink href={`mailto:${PUBLIC_SUPPORT_EMAIL}`}>{PUBLIC_SUPPORT_EMAIL}</SiteLink>&#8288;.
+    Still stuck? Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
   </p>
 </Doc>
