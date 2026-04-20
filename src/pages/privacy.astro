@@ -21,9 +21,12 @@ const effectiveDate = 'April 20, 2026';
 
   <p>
     This policy covers {PUBLIC_APP_NAME}, an async iMessage game
-    published by {PUBLIC_BUSINESS_NAME}. Gameplay state lives on your
-    device and inside the iMessage URL sent between players. The only
-    off-device signal is anonymous app analytics described below.
+    published by {PUBLIC_BUSINESS_NAME}. The game has no server of its
+    own. Drawings and gameplay state are encoded into the iMessage URL
+    and travel directly between players, so we cannot see, store, or
+    access them. In-app purchases are processed by Apple. The only
+    signal that reaches us is the anonymous app analytics described
+    below.
   </p>
 
   <section>
@@ -55,6 +58,31 @@ const effectiveDate = 'April 20, 2026';
       We use these signals to understand which features are used, detect
       bugs, and improve the app. We do not run advertising, we do not
       build user profiles, and we do not sell data.
+    </p>
+  </section>
+
+  <section>
+    <h2>Drawings and reporting</h2>
+    <p>
+      Drawings are shared only with the players you send them to. They
+      travel inside the iMessage URL and never pass through our systems
+      because we do not operate any. To flag a prompt word as offensive
+      or inappropriate, tap Report on the word inside the app to send
+      us an email, and we will look at it when we can. To stop
+      receiving messages from a specific player, use iMessage's block
+      feature.
+    </p>
+  </section>
+
+  <section>
+    <h2>Payments</h2>
+    <p>
+      We do not collect or store payment information. In-app purchases
+      are processed by Apple under <SiteLink
+        href="https://www.apple.com/legal/privacy/"
+        target="_blank"
+        aria-label="Apple's privacy policy, opens in new tab"
+      >Apple's privacy policy</SiteLink>.
     </p>
   </section>
 
