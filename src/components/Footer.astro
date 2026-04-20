@@ -1,16 +1,19 @@
 ---
 import SiteLink from './SiteLink.astro';
-import { PUBLIC_BUSINESS_NAME, PUBLIC_BUSINESS_URL } from 'astro:env/client';
+import { BUSINESS_NAME, BUSINESS_URL } from 'astro:env/client';
 
 const year = new Date().getFullYear();
 ---
 
 <footer>
   <small>
-    <SiteLink href="/">Home</SiteLink> · <SiteLink href="/privacy">Privacy</SiteLink> · <SiteLink href="/support">Support</SiteLink> · &copy; {year} <SiteLink
-      href={PUBLIC_BUSINESS_URL}
+    <SiteLink href="/">Home</SiteLink> · <SiteLink href="/privacy">Privacy</SiteLink> · <SiteLink href="/support">Support</SiteLink>
+  </small>
+  <small>
+    &copy; {year} <SiteLink
+      href={BUSINESS_URL}
       target="_blank"
-      aria-label={`${PUBLIC_BUSINESS_NAME}, opens in new tab`}
-    >{PUBLIC_BUSINESS_NAME}</SiteLink>
+      aria-label={`${BUSINESS_NAME}, opens in new tab`}
+    >{BUSINESS_NAME}</SiteLink>
   </small>
 </footer>
