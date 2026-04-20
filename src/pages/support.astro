@@ -1,0 +1,58 @@
+---
+import Doc from '../layouts/Doc.astro';
+import { PUBLIC_APP_NAME, PUBLIC_SUPPORT_EMAIL } from 'astro:env/client';
+---
+
+<Doc
+  title={`Support | ${PUBLIC_APP_NAME}`}
+  description={`Help with ${PUBLIC_APP_NAME}, answers to common questions, and how to report a drawing.`}
+>
+  <header class="doc__header">
+    <h1>Support</h1>
+    <p>
+      {PUBLIC_APP_NAME} is an async drawing game that lives inside
+      iMessage. Draw a word, send it, and let your friend guess whenever
+      they pick up their phone.
+    </p>
+  </header>
+
+  <section>
+    <h2>FAQ</h2>
+
+    <h3>How do I install it?</h3>
+    <p>
+      Open a Messages thread, tap the App Store icon in the iMessage app
+      drawer, search for {PUBLIC_APP_NAME}, and tap it to enable the
+      game inside iMessage.
+    </p>
+
+    <h3>How do I play?</h3>
+    <p>
+      Open {PUBLIC_APP_NAME} from the app drawer in any Messages thread,
+      draw the prompt you are given, and send it back into the
+      conversation for the other player to guess.
+    </p>
+
+    <h3>Why didn't my drawing send?</h3>
+    <p>
+      iMessage has to be on and online for the game to reach your
+      friend, so check Settings, Messages, and your signal before trying
+      again.
+    </p>
+
+    <h3>Where did my purchased pack go?</h3>
+    <p>
+      Open the pack screen inside {PUBLIC_APP_NAME} and tap Restore
+      Purchases, then confirm under Settings, Apple ID, Subscriptions
+      that you are signed in with the Apple ID that bought the pack.
+    </p>
+
+    <h3>How do I report a drawing?</h3>
+    <p>Tap Report on the drawing and a pre-filled email opens for you to send.</p>
+  </section>
+
+  <p class="doc__aside">
+    Data practices are covered in the <a href="/privacy">privacy policy</a>.
+    Still stuck? Email <a href={`mailto:${PUBLIC_SUPPORT_EMAIL}`}>{PUBLIC_SUPPORT_EMAIL}</a>.
+  </p>
+</Doc>

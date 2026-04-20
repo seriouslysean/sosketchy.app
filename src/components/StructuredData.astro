@@ -1,4 +1,6 @@
 ---
+import { PUBLIC_APP_NAME, PUBLIC_BUSINESS_NAME } from 'astro:env/client';
+
 const site = Astro.site!.href.replace(/\/$/, '');
 
 const graph = {
@@ -7,21 +9,21 @@ const graph = {
     {
       '@type': 'Organization',
       '@id': `${site}/#org`,
-      name: 'Splitleaf',
+      name: PUBLIC_BUSINESS_NAME,
       url: site,
     },
     {
       '@type': 'WebSite',
       '@id': `${site}/#site`,
       url: site,
-      name: 'So Sketchy',
+      name: PUBLIC_APP_NAME,
       inLanguage: 'en',
       publisher: { '@id': `${site}/#org` },
     },
     {
       '@type': 'SoftwareApplication',
       '@id': `${site}/#app`,
-      name: 'So Sketchy',
+      name: PUBLIC_APP_NAME,
       applicationCategory: 'GameApplication',
       operatingSystem: 'iOS 17',
       url: site,

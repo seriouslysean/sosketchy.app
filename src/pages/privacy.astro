@@ -1,0 +1,125 @@
+---
+import Doc from '../layouts/Doc.astro';
+import {
+  PUBLIC_APP_NAME,
+  PUBLIC_BUSINESS_NAME,
+  PUBLIC_SUPPORT_EMAIL,
+} from 'astro:env/client';
+
+const effectiveDate = 'April 20, 2026';
+---
+
+<Doc
+  title={`Privacy | ${PUBLIC_APP_NAME}`}
+  description={`How ${PUBLIC_APP_NAME} handles data. Anonymous analytics via TelemetryDeck, nothing else.`}
+>
+  <header class="doc__header">
+    <h1>Privacy</h1>
+    <p class="doc__meta">Effective: {effectiveDate}.</p>
+  </header>
+
+  <p>
+    This policy covers {PUBLIC_APP_NAME}, an async iMessage game
+    published by {PUBLIC_BUSINESS_NAME}. Gameplay state lives on your
+    device and inside the iMessage URL sent between players. The only
+    off-device signal is anonymous app analytics described below.
+  </p>
+
+  <section>
+    <h2>What we collect</h2>
+    <p>
+      We use TelemetryDeck to analyze app usage under Art. 6(1)(f) GDPR
+      legitimate interest, as we require reliable and efficient tools
+      for collecting app usage data.
+    </p>
+    <p>Data transferred:</p>
+    <ul>
+      <li>An anonymized, untraceable user ID (per app installation).</li>
+      <li>Actions defined by the app publisher (for example, "app launched," "settings opened").</li>
+      <li>Rounded timestamps (nearest hour).</li>
+      <li>Device metadata (system and app version, device type).</li>
+      <li>Publisher-defined metadata.</li>
+    </ul>
+    <p>Data not collected:</p>
+    <ul>
+      <li>No IP addresses (not in logs, not in the database).</li>
+      <li>No cookies or tracking technologies.</li>
+      <li>No persistent identifiers that could be traced back to individuals.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How we use it</h2>
+    <p>
+      We use these signals to understand which features are used, detect
+      bugs, and improve the app. We do not run advertising, we do not
+      build user profiles, and we do not sell data.
+    </p>
+  </section>
+
+  <section>
+    <h2>Third-party services</h2>
+    <p>
+      Analytics are processed by TelemetryDeck GmbH, Von-der-Tann-Str.
+      54, 86159 Augsburg, Germany. See their policy at
+      <a
+        href="https://telemetrydeck.com/privacy"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="TelemetryDeck privacy policy, opens in new tab"
+      >telemetrydeck.com/privacy</a>. We require TelemetryDeck to
+      protect your data at the same standard described in this policy.
+    </p>
+  </section>
+
+  <section>
+    <h2>Data retention and deletion</h2>
+    <p>
+      The analytics data above is anonymous, so there is no personal
+      record attached to you to retain or delete. You can disable
+      collection entirely from the Analytics setting inside the app.
+      After you turn it off, no further signals are sent.
+    </p>
+  </section>
+
+  <section>
+    <h2>Your GDPR rights</h2>
+    <p>
+      You have the right to access, correct, or object to the processing
+      of personal data that relates to you. Because the analytics
+      described above are anonymous and cannot be traced back to an
+      individual, we cannot associate a request with a specific user.
+      Where no personal record exists, we will tell you that.
+    </p>
+  </section>
+
+  <section>
+    <h2>Do Not Track</h2>
+    <p>This app does not track your online activities across third-party websites or services.</p>
+  </section>
+
+  <section>
+    <h2>Children's privacy</h2>
+    <p>
+      {PUBLIC_APP_NAME} is not directed at children under 13 and does
+      not knowingly collect personal information from them.
+    </p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>
+      When we make a material change, we bump the effective date at the
+      top of this page and surface a notice inside the app before the
+      change takes effect.
+    </p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Data controller: {PUBLIC_BUSINESS_NAME}. Questions about this
+      policy: <a href={`mailto:${PUBLIC_SUPPORT_EMAIL}`}>{PUBLIC_SUPPORT_EMAIL}</a>.
+    </p>
+  </section>
+</Doc>

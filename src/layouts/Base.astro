@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import StructuredData from '../components/StructuredData.astro';
+import { PUBLIC_APP_NAME } from 'astro:env/client';
 
 interface Props {
   title?: string;
@@ -9,8 +10,8 @@ interface Props {
 }
 
 const {
-  title = 'So Sketchy',
-  description = 'So Sketchy, an iMessage game.',
+  title = PUBLIC_APP_NAME,
+  description = `${PUBLIC_APP_NAME}, an iMessage game.`,
   noindex = false,
 } = Astro.props;
 
@@ -30,8 +31,13 @@ const ogImage = new URL('/og-image.png', Astro.site).href;
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#C75B6A" />
+    <meta name="color-scheme" content="light" />
     <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content={PUBLIC_APP_NAME} />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -39,7 +45,7 @@ const ogImage = new URL('/og-image.png', Astro.site).href;
     <link rel="manifest" href="/manifest.webmanifest" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="So Sketchy" />
+    <meta property="og:site_name" content={PUBLIC_APP_NAME} />
     <meta property="og:url" content={canonical} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -47,14 +53,14 @@ const ogImage = new URL('/og-image.png', Astro.site).href;
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1024" />
     <meta property="og:image:height" content="1024" />
-    <meta property="og:image:alt" content="So Sketchy app icon" />
+    <meta property="og:image:alt" content={`${PUBLIC_APP_NAME} app icon`} />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    <meta name="twitter:image:alt" content="So Sketchy app icon" />
+    <meta name="twitter:image:alt" content={`${PUBLIC_APP_NAME} app icon`} />
 
     <StructuredData />
   </head>
