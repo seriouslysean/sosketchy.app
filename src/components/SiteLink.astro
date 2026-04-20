@@ -1,10 +1,8 @@
 ---
+import type { HTMLAttributes } from 'astro/types';
 import { getUrl } from '../utils/url-utils';
 
-interface Props {
-  href: string;
-  [key: string]: unknown;
-}
+type Props = Omit<HTMLAttributes<'a'>, 'href'> & { href: string };
 
 const { href, class: className, rel, ...attrs } = Astro.props;
 
