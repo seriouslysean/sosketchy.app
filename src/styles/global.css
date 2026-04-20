@@ -162,7 +162,7 @@
 
   .doc {
     inline-size: 100%;
-    max-inline-size: 38rem;
+    max-inline-size: 42rem;
     padding-block: clamp(2.5rem, 6vw, 4rem);
     color: var(--ink);
     text-align: start;
@@ -197,6 +197,10 @@
     & section > h3:first-of-type,
     & section > h2 + h3 {
       margin-block-start: 0.75rem;
+    }
+
+    & p {
+      text-wrap: pretty;
     }
 
     & p + p,
