@@ -20,21 +20,20 @@ const effectiveDate = 'April 20, 2026';
   </header>
 
   <p>
-    This policy covers {APP_NAME}, an async iMessage game
-    published by {BUSINESS_NAME}. The game has no server of its
-    own. Drawings and gameplay state are encoded into the iMessage URL
-    and travel directly between players, so we cannot see, store, or
-    access them. In-app purchases are processed by Apple. The only
-    signal that reaches us is the anonymous app analytics described
+    Short version: we can't see your drawings. {APP_NAME} has no
+    server of its own. Your drawings and game state travel inside the
+    iMessage URL, directly from your phone to your friend's, and we
+    never touch them. Apple handles any in-app purchases. The only
+    thing that reaches us is the anonymous app analytics described
     below.
   </p>
 
   <section>
     <h2>What we collect</h2>
     <p>
-      We use TelemetryDeck to analyze app usage under Art. 6(1)(f) GDPR
-      legitimate interest, as we require reliable and efficient tools
-      for collecting app usage data.
+      We use TelemetryDeck for anonymous usage analytics. Under GDPR,
+      our basis is Art. 6(1)(f) legitimate interest: we need a reliable
+      way to understand how the app gets used.
     </p>
     <p>Data transferred:</p>
     <ul>
@@ -55,30 +54,28 @@ const effectiveDate = 'April 20, 2026';
   <section>
     <h2>How we use it</h2>
     <p>
-      We use these signals to understand which features are used, detect
-      bugs, and improve the app. We do not run advertising, we do not
-      build user profiles, and we do not sell data.
+      We look at this data to see which features get used, find bugs,
+      and make the app better. That's the list. No ads, no user
+      profiles, no selling.
     </p>
   </section>
 
   <section>
-    <h2>Drawings and reporting</h2>
+    <h2>Drawings and reports</h2>
     <p>
-      Drawings are shared only with the players you send them to. They
-      travel inside the iMessage URL and never pass through our systems
-      because we do not operate any. To flag a prompt word as offensive
-      or inappropriate, tap Report on the word inside the app to send
-      us an email, and we will look at it when we can. To stop
-      receiving messages from a specific player, use iMessage's block
-      feature.
+      Your drawings go directly to the people you send them to, through
+      iMessage. We're not in the middle. If a word the app gave you
+      looks wrong or offensive, tap Report on it and an email lands
+      with us. We'll have a look. To stop hearing from a specific
+      player, use iMessage's block feature.
     </p>
   </section>
 
   <section>
     <h2>Payments</h2>
     <p>
-      We do not collect or store payment information. In-app purchases
-      are processed by Apple under <SiteLink
+      We never see your payment info. Apple handles any in-app
+      purchases under <SiteLink
         href="https://www.apple.com/legal/privacy/"
         target="_blank"
         aria-label="Apple's privacy policy, opens in new tab"
@@ -87,37 +84,37 @@ const effectiveDate = 'April 20, 2026';
   </section>
 
   <section>
-    <h2>Third-party services</h2>
+    <h2>Who handles the analytics</h2>
     <p>
-      Analytics are processed by TelemetryDeck GmbH, Von-der-Tann-Str.
-      54, 86159 Augsburg, Germany. See their policy at
-      <SiteLink
+      TelemetryDeck GmbH runs the analytics, out of Germany
+      (Von-der-Tann-Str. 54, 86159 Augsburg). Their privacy policy is
+      at <SiteLink
         href="https://telemetrydeck.com/privacy"
         target="_blank"
         aria-label="TelemetryDeck privacy policy, opens in new tab"
-      >telemetrydeck.com/privacy</SiteLink>&#8288;. We require TelemetryDeck to
-      protect your data at the same standard described in this policy.
+      >telemetrydeck.com/privacy</SiteLink>&#8288;. They're held to the
+      same standard this page describes.
     </p>
   </section>
 
   <section>
-    <h2>Data retention and deletion</h2>
+    <h2>Keeping and deleting data</h2>
     <p>
-      The analytics data above is anonymous, so there is no personal
-      record attached to you to retain or delete. You can disable
-      collection entirely from the Analytics setting inside the app.
-      After you turn it off, no further signals are sent.
+      The analytics data is anonymous, so there's no personal record of
+      you sitting around to keep or delete. If you want it off
+      entirely, the app has an Analytics toggle. After you turn it off,
+      nothing else gets sent.
     </p>
   </section>
 
   <section>
     <h2>Your GDPR rights</h2>
     <p>
-      You have the right to access, correct, or object to the processing
-      of personal data that relates to you. Because the analytics
-      described above are anonymous and cannot be traced back to an
-      individual, we cannot associate a request with a specific user.
-      Where no personal record exists, we will tell you that.
+      Under GDPR, you have the right to access, correct, or object to
+      the processing of personal data that relates to you. The catch
+      with this app: the analytics above can't be traced back to a
+      person, so there usually isn't a record tied to you. If we can't
+      find one, we'll say so.
     </p>
   </section>
 
@@ -129,25 +126,24 @@ const effectiveDate = 'April 20, 2026';
   <section>
     <h2>Children's privacy</h2>
     <p>
-      {APP_NAME} is not directed at children under 13 and does
-      not knowingly collect personal information from them.
+      {APP_NAME} isn't aimed at kids under 13, and we don't knowingly
+      collect info from them.
     </p>
   </section>
 
   <section>
-    <h2>Changes to this policy</h2>
+    <h2>If this page changes</h2>
     <p>
-      When we make a material change, we bump the effective date at the
-      top of this page and surface a notice inside the app before the
-      change takes effect.
+      When something important here changes, we'll bump the effective
+      date up top and show a notice in the app before it takes effect.
     </p>
   </section>
 
   <section>
-    <h2>Contact</h2>
+    <h2>Questions?</h2>
     <p>
-      Data controller: {BUSINESS_NAME}. Questions about this
-      policy: <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
+      Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
+      {BUSINESS_NAME} runs the app and maintains this page.
     </p>
   </section>
 </Doc>

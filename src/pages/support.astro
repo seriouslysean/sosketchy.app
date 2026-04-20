@@ -6,14 +6,14 @@ import { APP_NAME, SUPPORT_EMAIL } from 'astro:env/client';
 
 <Doc
   title={`Support | ${APP_NAME}`}
-  description={`Help with ${APP_NAME}, answers to common questions, and how to report a drawing.`}
+  description={`Help with ${APP_NAME}, answers to common questions, and how to report a word.`}
 >
   <header class="doc__header">
     <h1>Support</h1>
     <p>
-      {APP_NAME} is an async drawing game that lives inside
-      iMessage. Draw a word, send it, and let your friend guess whenever
-      they pick up their phone.
+      {APP_NAME} is an async drawing game that lives inside iMessage.
+      Draw a word, send it, and your friend guesses whenever they pick
+      up their phone.
     </p>
   </header>
 
@@ -22,41 +22,41 @@ import { APP_NAME, SUPPORT_EMAIL } from 'astro:env/client';
 
     <h3>How do I install it?</h3>
     <p>
-      Open a Messages thread, tap the App Store icon in the iMessage app
-      drawer, search for {APP_NAME}, and tap it to enable the
-      game inside iMessage.
+      Open any Messages thread. Tap the App Store icon in the iMessage
+      app drawer, search for {APP_NAME}, and tap to enable it.
     </p>
 
     <h3>How do I play?</h3>
     <p>
-      Open {APP_NAME} from the app drawer in any Messages thread,
-      draw the prompt you are given, and send it back into the
-      conversation for the other player to guess.
+      Open {APP_NAME} from the app drawer in a Messages thread. Draw
+      the word you're given and send the drawing back into the
+      conversation. The other player guesses what it is.
     </p>
 
     <h3>Why didn't my drawing send?</h3>
     <p>
-      iMessage has to be on and online for the game to reach your
-      friend, so check Settings, Messages, and your signal before trying
+      The game rides on iMessage, so iMessage needs to be on and
+      online. Check Settings, Messages, and your signal, then try
       again.
     </p>
 
     <h3>Where did my purchased pack go?</h3>
     <p>
-      Open the pack screen inside {APP_NAME} and tap Restore
-      Purchases, then confirm under Settings, Apple ID, Subscriptions
-      that you are signed in with the Apple ID that bought the pack.
+      Open the pack screen inside {APP_NAME} and tap Restore Purchases.
+      If it still won't come back, check that you're signed in with the
+      Apple ID that bought the pack (Settings, Apple ID,
+      Subscriptions).
     </p>
 
     <h3>How do I report a word?</h3>
     <p>
-      Tap Report on the word. A pre-filled email opens, ready for you
-      to send, and we'll take a look when we receive it.
+      Tap Report on the word. A pre-filled email opens, ready to send.
+      We'll have a look when it arrives.
     </p>
   </section>
 
   <p class="doc__aside">
-    Data practices are covered in the <SiteLink href="/privacy">privacy policy</SiteLink>&#8288;.
+    Details on how we handle data live in the <SiteLink href="/privacy">privacy policy</SiteLink>&#8288;.
     Still stuck? Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
   </p>
 </Doc>
