@@ -3,8 +3,8 @@ import { defineConfig, envField } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 const env = loadEnv(process.env.NODE_ENV ?? 'development', process.cwd(), '');
-const site = env.SITE_URL || process.env.SITE_URL;
-const base = env.BASE_PATH || process.env.BASE_PATH || '/';
+const site = env.SITE_URL;
+const base = env.BASE_PATH || '/';
 
 if (!site) {
   throw new Error('SITE_URL is required. Set it in .env or your CI environment.');

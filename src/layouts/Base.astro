@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import StructuredData from '../components/StructuredData.astro';
 import { PUBLIC_APP_NAME } from 'astro:env/client';
-import { getFullUrl, getUrl, stripBasePath } from '../utils/url-utils';
+import { getFullUrl, getUrl } from '../utils/url-utils';
 
 interface Props {
   title?: string;
@@ -16,7 +16,7 @@ const {
   noindex = false,
 } = Astro.props;
 
-const canonical = getFullUrl(stripBasePath(Astro.url.pathname));
+const canonical = getFullUrl(Astro.url.pathname);
 const ogImage = getFullUrl('/og-image.png');
 ---
 

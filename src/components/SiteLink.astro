@@ -6,16 +6,13 @@ interface Props {
   [key: string]: unknown;
 }
 
-const { href, class: className, ...attrs } = Astro.props;
+const { href, class: className, rel, ...attrs } = Astro.props;
 
 const isExternal = href.startsWith('http://') || href.startsWith('https://');
-const isHash = href.startsWith('#');
-const isMailto = href.startsWith('mailto:');
+const isPassthrough = isExternal || href.startsWith('#') || href.startsWith('mailto:');
 
-const finalHref = (isExternal || isHash || isMailto) ? href : getUrl(href);
-const finalRel = attrs.target === '_blank' && !attrs.rel
-  ? 'noopener noreferrer'
-  : attrs.rel;
+const finalHref = isPassthrough ? href : getUrl(href);
+const finalRel = attrs.target === '_blank' && !rel ? 'noopener noreferrer' : rel;
 ---
 
 <a href={finalHref} rel={finalRel} class={className} {...attrs}>
