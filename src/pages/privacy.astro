@@ -20,20 +20,19 @@ const effectiveDate = 'April 20, 2026';
   </header>
 
   <p>
-    Short version: we can't see your drawings. {APP_NAME} has no
-    server of its own. Your drawings and game state travel inside the
-    iMessage URL, directly from your phone to your friend's, and we
-    never touch them. Apple handles any in-app purchases. The only
-    thing that reaches us is the anonymous app analytics described
-    below.
+    We can't see your drawings. {APP_NAME} has no server of its own,
+    so your drawings and game state travel inside the iMessage URL,
+    directly from your phone to your friend's, and never pass through
+    us. Apple handles any in-app purchases. The only thing that
+    reaches us is the anonymous app analytics described below.
   </p>
 
   <section>
     <h2>What we collect</h2>
     <p>
       We use TelemetryDeck for anonymous usage analytics. Under GDPR,
-      our basis is Art. 6(1)(f) legitimate interest: we need a reliable
-      way to understand how the app gets used.
+      our basis is Art. 6(1)(f) legitimate interest, because we need a
+      reliable way to understand how the app gets used.
     </p>
     <p>Data transferred:</p>
     <ul>
@@ -55,26 +54,27 @@ const effectiveDate = 'April 20, 2026';
     <h2>How we use it</h2>
     <p>
       We look at this data to see which features get used, find bugs,
-      and make the app better. That's the list. No ads, no user
-      profiles, no selling.
+      and make the app better, and that's the whole list. We don't run
+      ads, build user profiles, or sell data to anyone.
     </p>
   </section>
 
   <section>
     <h2>Drawings and reports</h2>
     <p>
-      Your drawings go directly to the people you send them to, through
-      iMessage. We're not in the middle. If a word the app gave you
-      looks wrong or offensive, tap Report on it and an email lands
-      with us. We'll have a look. To stop hearing from a specific
-      player, use iMessage's block feature.
+      Your drawings go directly to the people you send them to through
+      iMessage, so we're not in the middle at any point. If a word the
+      app gave you looks wrong or offensive, tap Report on it and a
+      pre-filled email lands with us for review. If you want to stop
+      hearing from a specific player, use iMessage's built-in block
+      feature.
     </p>
   </section>
 
   <section>
     <h2>Payments</h2>
     <p>
-      We never see your payment info. Apple handles any in-app
+      We never see your payment info, because Apple handles any in-app
       purchases under <SiteLink
         href="https://www.apple.com/legal/privacy/"
         target="_blank"
@@ -86,24 +86,24 @@ const effectiveDate = 'April 20, 2026';
   <section>
     <h2>Who handles the analytics</h2>
     <p>
-      TelemetryDeck GmbH runs the analytics, out of Germany
-      (Von-der-Tann-Str. 54, 86159 Augsburg). Their privacy policy is
-      at <SiteLink
+      TelemetryDeck GmbH runs the analytics, based in Germany
+      (Von-der-Tann-Str. 54, 86159 Augsburg). Their privacy policy
+      lives at <SiteLink
         href="https://telemetrydeck.com/privacy"
         target="_blank"
         aria-label="TelemetryDeck privacy policy, opens in new tab"
-      >telemetrydeck.com/privacy</SiteLink>&#8288;. They're held to the
-      same standard this page describes.
+      >telemetrydeck.com/privacy</SiteLink>&#8288;, and they're held
+      to the same standard this page describes.
     </p>
   </section>
 
   <section>
     <h2>Keeping and deleting data</h2>
     <p>
-      The analytics data is anonymous, so there's no personal record of
-      you sitting around to keep or delete. If you want it off
-      entirely, the app has an Analytics toggle. After you turn it off,
-      nothing else gets sent.
+      The analytics data is anonymous, so there's no personal record
+      of you sitting around for us to keep or delete. If you'd rather
+      have it off entirely, the app has an Analytics toggle, and once
+      you turn it off nothing else gets sent.
     </p>
   </section>
 
@@ -112,9 +112,9 @@ const effectiveDate = 'April 20, 2026';
     <p>
       Under GDPR, you have the right to access, correct, or object to
       the processing of personal data that relates to you. The catch
-      with this app: the analytics above can't be traced back to a
-      person, so there usually isn't a record tied to you. If we can't
-      find one, we'll say so.
+      with this app is that the analytics above can't be traced back
+      to a person, so in most cases there's no record tied to you to
+      act on. If we can't find one, we'll tell you that.
     </p>
   </section>
 
@@ -126,8 +126,8 @@ const effectiveDate = 'April 20, 2026';
   <section>
     <h2>Children's privacy</h2>
     <p>
-      {APP_NAME} isn't aimed at kids under 13, and we don't knowingly
-      collect info from them.
+      {APP_NAME} isn't aimed at children under 13, and we don't
+      knowingly collect information from them.
     </p>
   </section>
 
@@ -135,15 +135,17 @@ const effectiveDate = 'April 20, 2026';
     <h2>If this page changes</h2>
     <p>
       When something important here changes, we'll bump the effective
-      date up top and show a notice in the app before it takes effect.
+      date up top and show a notice inside the app before the change
+      takes effect.
     </p>
   </section>
 
   <section>
     <h2>Questions?</h2>
     <p>
-      Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
-      {BUSINESS_NAME} runs the app and maintains this page.
+      Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288; with
+      questions about this policy. {BUSINESS_NAME} runs the app and
+      maintains this page.
     </p>
   </section>
 </Doc>

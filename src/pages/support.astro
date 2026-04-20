@@ -12,8 +12,9 @@ import { APP_NAME, SUPPORT_EMAIL } from 'astro:env/client';
     <h1>Support</h1>
     <p>
       {APP_NAME} is an async drawing game that lives inside iMessage.
-      Draw a word, send it, and your friend guesses whenever they pick
-      up their phone.
+      You get a word to draw, you send the drawing into the
+      conversation, and your friend guesses it whenever they pick up
+      their phone.
     </p>
   </header>
 
@@ -22,41 +23,41 @@ import { APP_NAME, SUPPORT_EMAIL } from 'astro:env/client';
 
     <h3>How do I install it?</h3>
     <p>
-      Open any Messages thread. Tap the App Store icon in the iMessage
+      Open any Messages thread, tap the App Store icon in the iMessage
       app drawer, search for {APP_NAME}, and tap to enable it.
     </p>
 
     <h3>How do I play?</h3>
     <p>
-      Open {APP_NAME} from the app drawer in a Messages thread. Draw
-      the word you're given and send the drawing back into the
-      conversation. The other player guesses what it is.
+      Open {APP_NAME} from the app drawer in a Messages thread, draw
+      the word you're given, and send the drawing back into the
+      conversation for the other player to guess.
     </p>
 
     <h3>Why didn't my drawing send?</h3>
     <p>
       The game rides on iMessage, so iMessage needs to be on and
-      online. Check Settings, Messages, and your signal, then try
-      again.
+      connected before your drawing will reach your friend. Check
+      Settings, Messages, and your signal, then try again.
     </p>
 
     <h3>Where did my purchased pack go?</h3>
     <p>
       Open the pack screen inside {APP_NAME} and tap Restore Purchases.
-      If it still won't come back, check that you're signed in with the
-      Apple ID that bought the pack (Settings, Apple ID,
-      Subscriptions).
+      If it still doesn't come back, check under Settings, Apple ID,
+      Subscriptions that you're signed in with the Apple ID that
+      bought the pack.
     </p>
 
     <h3>How do I report a word?</h3>
     <p>
-      Tap Report on the word. A pre-filled email opens, ready to send.
-      We'll have a look when it arrives.
+      Tap Report on the word, and a pre-filled email opens for you to
+      send. We'll have a look when it arrives.
     </p>
   </section>
 
   <p class="doc__aside">
     Details on how we handle data live in the <SiteLink href="/privacy">privacy policy</SiteLink>&#8288;.
-    Still stuck? Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
+    If you're still stuck, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
   </p>
 </Doc>
