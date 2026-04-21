@@ -1,5 +1,6 @@
 ---
 import Base from './Base.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 interface Props {
@@ -11,6 +12,7 @@ const { title, description } = Astro.props;
 ---
 
 <Base title={title} description={description}>
+  <Header />
   <main id="main" class="doc-main">
     <article class="doc">
       <slot />
