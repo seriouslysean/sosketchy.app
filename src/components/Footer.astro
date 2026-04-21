@@ -5,9 +5,9 @@ import { BUSINESS_NAME, BUSINESS_URL } from 'astro:env/client';
 const year = new Date().getFullYear();
 ---
 
-<footer>
+<footer class="site-footer">
   <small>
-    <SiteLink href="/">Home</SiteLink> · <SiteLink href="/privacy">Privacy</SiteLink> · <SiteLink href="/support">Support</SiteLink>
+    <SiteLink href="/privacy">Privacy</SiteLink> · <SiteLink href="/support">Support</SiteLink>
   </small>
   <small>
     &copy; {year} <SiteLink

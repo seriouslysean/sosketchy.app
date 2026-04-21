@@ -7,7 +7,8 @@ import {
   SUPPORT_EMAIL,
 } from 'astro:env/client';
 
-const effectiveDate = 'April 20, 2026';
+const effectiveDateISO = '2026-04-20';
+const effectiveDateLabel = 'April 20, 2026';
 ---
 
 <Doc
@@ -16,7 +17,6 @@ const effectiveDate = 'April 20, 2026';
 >
   <header class="doc__header">
     <h1>Privacy</h1>
-    <p class="doc__meta">Effective: {effectiveDate}.</p>
   </header>
 
   <p>
@@ -134,8 +134,8 @@ const effectiveDate = 'April 20, 2026';
   <section>
     <h2>If this page changes</h2>
     <p>
-      When something important here changes, we'll bump the effective
-      date up top and show a notice inside the app before the change
+      When something important here changes, we'll update the effective
+      date below and show a notice inside the app before the change
       takes effect.
     </p>
   </section>
@@ -148,4 +148,6 @@ const effectiveDate = 'April 20, 2026';
       maintains this page.
     </p>
   </section>
+
+  <footer class="doc__meta">Effective <time datetime={effectiveDateISO}>{effectiveDateLabel}</time></footer>
 </Doc>
