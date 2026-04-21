@@ -267,9 +267,15 @@
     margin-block-start: 0.75rem;
   }
 
-  .doc__meta,
   .doc__aside {
     color: var(--ink-soft);
     font-size: 0.9375rem;
+  }
+
+  .doc__meta {
+    color: var(--ink-muted);
+    font-size: 0.8125rem;
+    text-align: center;
+    white-space: nowrap;
   }
 }
