@@ -43,7 +43,7 @@ const {
   ogImageAlt = defaultOgImageAlt,
 } = Astro.props;
 
-const title = [APP_NAME, section].filter(Boolean).join(' | ');
+const title = [section, APP_NAME].filter(Boolean).join(' | ');
 
 const canonical = getFullUrl(Astro.url.pathname);
 const ogImage = getFullUrl(ogImagePath);
