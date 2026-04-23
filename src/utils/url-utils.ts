@@ -1,4 +1,4 @@
-import { BASE_PATH, SITE_URL } from 'astro:env/client';
+import { BASE_PATH, SITE_URL } from 'astro:env/server';
 
 export const getBasePath = (): string => BASE_PATH;
 
@@ -20,9 +20,5 @@ export const getUrl = (path = '/'): string => {
   return cleanBasePath + normalizedPath;
 };
 
-export const getFullUrl = (path = '/'): string => {
-  if (!SITE_URL) {
-    throw new Error('SITE_URL is required but missing.');
-  }
-  return new URL(getUrl(path), SITE_URL).toString();
-};
+export const getFullUrl = (path = '/'): string =>
+  new URL(getUrl(path), SITE_URL).toString();

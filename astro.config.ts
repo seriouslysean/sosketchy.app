@@ -20,17 +20,18 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.endsWith('.txt'),
+      filter: (page) => !page.endsWith('.txt') && !/\/g\/?$/.test(page),
     }),
   ],
   env: {
     schema: {
-      SITE_URL: envField.string({ context: 'client', access: 'public' }),
-      BASE_PATH: envField.string({ context: 'client', access: 'public', default: '/' }),
-      APP_NAME: envField.string({ context: 'client', access: 'public', default: 'So Sketchy' }),
-      BUSINESS_NAME: envField.string({ context: 'client', access: 'public', default: 'Splitleaf, LLC' }),
-      BUSINESS_URL: envField.string({ context: 'client', access: 'public', default: 'https://www.splitleaf.net' }),
-      SUPPORT_EMAIL: envField.string({ context: 'client', access: 'public', default: 'support@sosketchy.app' }),
+      SITE_URL: envField.string({ context: 'server', access: 'public' }),
+      BASE_PATH: envField.string({ context: 'server', access: 'public', default: '/' }),
+      APP_NAME: envField.string({ context: 'server', access: 'public', default: '' }),
+      BUSINESS_NAME: envField.string({ context: 'server', access: 'public', default: '' }),
+      BUSINESS_URL: envField.string({ context: 'server', access: 'public', default: '' }),
+      SUPPORT_EMAIL: envField.string({ context: 'server', access: 'public', default: '' }),
+      APP_STORE_URL: envField.string({ context: 'server', access: 'public', default: '' }),
     },
   },
 });

@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import SiteLink from '../components/SiteLink.astro';
+import AppStoreBadge from '../assets/app-store-badge.svg';
+import { copy, formatCopy } from '../i18n/copy';
+import { APP_NAME, APP_STORE_URL } from '../utils/env';
+import splashArt from '../assets/splash-art.png';
+
+const pageCopy = copy.pages.g;
+const title = pageCopy.title;
+const description = APP_NAME
+  ? formatCopy(pageCopy.description, { appName: APP_NAME })
+  : pageCopy.descriptionFallback;
+const badgeAlt = copy.common.downloadAppStore;
+---
+
+<Base title={title} description={description} noindex referrer="no-referrer">
+  <script is:inline>
+    if (window.location.search) {
+      window.history.replaceState?.(
+        window.history.state,
+        '',
+        window.location.pathname + window.location.hash,
+      );
+    }
+  </script>
+  <Header />
+  <main id="main">
+    <article class="splash">
+      <Image
+        class="splash__art"
+        src={splashArt}
+        alt=""
+        width={1024}
+        height={819}
+        densities={[1, 2]}
+        sizes="(max-width: 48rem) calc(100vw - 2rem), 44rem"
+        loading="eager"
+        fetchpriority="high"
+        decoding="sync"
+      />
+      <h1 class="splash__title">{title}</h1>
+      {APP_STORE_URL ? (
+        <SiteLink class="splash__badge" href={APP_STORE_URL} aria-label={badgeAlt}>
+          <AppStoreBadge aria-hidden="true" focusable="false" />
+        </SiteLink>
+      ) : (
+        <span class="splash__badge splash__badge--disabled" role="img" aria-label={badgeAlt} aria-disabled="true">
+          <AppStoreBadge aria-hidden="true" focusable="false" />
+        </span>
+      )}
+    </article>
+  </main>
+</Base>

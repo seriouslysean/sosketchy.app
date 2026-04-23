@@ -1,5 +1,5 @@
 ---
-import { APP_NAME, BUSINESS_NAME } from 'astro:env/client';
+import { APP_NAME, BUSINESS_NAME } from '../utils/env';
 import { getFullUrl } from '../utils/url-utils';
 
 const siteRoot = getFullUrl('/').replace(/\/$/, '');

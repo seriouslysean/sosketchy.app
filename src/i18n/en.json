@@ -1,0 +1,18 @@
+{
+  "common": {
+    "downloadAppStore": "Download on the App Store"
+  },
+  "site": {
+    "defaultDescription": "{appName} is a drawing game inside iMessage. Get a word, draw it, send it over, and your friend guesses whenever they pick up their phone.",
+    "defaultDescriptionFallback": "A drawing game inside iMessage. Get a word, draw it, send it over, and your friend guesses whenever they pick up their phone.",
+    "defaultOgImageAlt": "{appName} drawing preview",
+    "defaultOgImageAltFallback": "Drawing preview"
+  },
+  "pages": {
+    "g": {
+      "title": "Want to guess what your friend drew?",
+      "description": "Open {appName} to see your friend's drawing.",
+      "descriptionFallback": "Open the app to see your friend's drawing."
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { APP_NAME } from 'astro:env/client';
+import { APP_NAME } from '../utils/env';
 import { getUrl } from '../utils/url-utils';
 
 export const GET: APIRoute = () => {
