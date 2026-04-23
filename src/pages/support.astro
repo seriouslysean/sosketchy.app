@@ -6,58 +6,40 @@ import { APP_NAME, SUPPORT_EMAIL } from '../utils/env';
 
 <Doc
   title="Support"
-  description={`Help with ${APP_NAME}, answers to common questions, and how to report a word.`}
+  description={`Support for ${APP_NAME}, including contact information and basic help.`}
 >
   <header class="doc__header">
     <h1>Support</h1>
     <p>
-      {APP_NAME} is a drawing game inside iMessage: you get a word to
-      draw, send the drawing into the conversation, and your friend
-      guesses it whenever they pick up their phone.
+      Need help with {APP_NAME}? Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
     </p>
   </header>
 
   <section>
-    <h2>FAQ</h2>
+    <h2>Common actions</h2>
 
-    <h3>How do I install it?</h3>
+    <h3>Open the game</h3>
     <p>
-      In any Messages conversation, tap the App Store icon next to the
-      text field, search for {APP_NAME}, and tap it to turn the game
-      on.
+      In a Messages conversation, tap the Apps button next to the text
+      field and open {APP_NAME} from the iMessage app drawer.
     </p>
 
-    <h3>How do I play?</h3>
+    <h3>Report a word</h3>
     <p>
-      Open a Messages conversation, tap the {APP_NAME} icon from the
-      row of iMessage apps below your text field, draw the word you're
-      given, and send the drawing back for your friend to guess.
+      Tap Report on the word. The app opens a pre-filled email you can
+      send to us.
     </p>
 
-    <h3>Why didn't my drawing send?</h3>
+    <h3>Save to Photos</h3>
     <p>
-      The game rides on iMessage, so iMessage needs to be on and
-      connected before your drawing will reach your friend. Check
-      Settings, Messages, and your signal, then try again.
+      {APP_NAME} asks for Photos access only when you save a drawing.
+      You can change Photos access later in the app's Settings screen
+      or in iOS Settings.
     </p>
 
-    <h3>Where did my purchased pack go?</h3>
+    <h3>Privacy</h3>
     <p>
-      Open the pack screen inside {APP_NAME} and tap Restore Purchases.
-      If it still doesn't come back, check under Settings, Apple ID,
-      Subscriptions that you're signed in with the Apple ID that
-      bought the pack.
-    </p>
-
-    <h3>How do I report a word?</h3>
-    <p>
-      Tap Report on the word, and a pre-filled email opens for you to
-      send. We'll have a look when it arrives.
+      Details on data handling are in the <SiteLink href="/privacy">privacy policy</SiteLink>&#8288;.
     </p>
   </section>
-
-  <p class="doc__aside">
-    Details on how we handle data live in the <SiteLink href="/privacy">privacy policy</SiteLink>&#8288;.
-    If you're still stuck, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288;.
-  </p>
 </Doc>
