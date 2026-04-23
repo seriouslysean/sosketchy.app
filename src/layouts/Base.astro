@@ -1,23 +1,50 @@
 ---
 import '../styles/global.css';
+import { getImage } from 'astro:assets';
 import StructuredData from '../components/StructuredData.astro';
-import { APP_NAME } from 'astro:env/client';
+import { copy, formatCopy } from '../i18n/copy';
+import { APP_NAME } from '../utils/env';
 import { getFullUrl, getUrl } from '../utils/url-utils';
+import splashArt from '../assets/splash-art.png';
 
 interface Props {
   title?: string;
   description?: string;
   noindex?: boolean;
+  referrer?: string;
+  ogImage?: string;
+  ogImageType?: string;
+  ogImageWidth?: number;
+  ogImageHeight?: number;
+  ogImageAlt?: string;
 }
+
+const defaultDescription = APP_NAME
+  ? formatCopy(copy.site.defaultDescription, { appName: APP_NAME })
+  : copy.site.defaultDescriptionFallback;
+const defaultOgImage = await getImage({
+  src: splashArt,
+  width: 1200,
+  format: 'png',
+});
+const defaultOgImageAlt = APP_NAME
+  ? formatCopy(copy.site.defaultOgImageAlt, { appName: APP_NAME })
+  : copy.site.defaultOgImageAltFallback;
 
 const {
   title = APP_NAME,
-  description = `${APP_NAME}, an iMessage game.`,
+  description = defaultDescription,
   noindex = false,
+  referrer = 'strict-origin-when-cross-origin',
+  ogImage: ogImagePath = defaultOgImage.src,
+  ogImageType = 'image/png',
+  ogImageWidth = defaultOgImage.attributes.width,
+  ogImageHeight = defaultOgImage.attributes.height,
+  ogImageAlt = defaultOgImageAlt,
 } = Astro.props;
 
 const canonical = getFullUrl(Astro.url.pathname);
-const ogImage = getFullUrl('/og-image.png');
+const ogImage = getFullUrl(ogImagePath);
 ---
 
 <!doctype html>
@@ -31,7 +58,7 @@ const ogImage = getFullUrl('/og-image.png');
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="referrer" content={referrer} />
     <meta name="format-detection" content="telephone=no" />
     <meta name="theme-color" content="#C75B6A" />
     <meta name="color-scheme" content="light" />
@@ -51,17 +78,17 @@ const ogImage = getFullUrl('/og-image.png');
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1024" />
-    <meta property="og:image:height" content="1024" />
-    <meta property="og:image:alt" content={`${APP_NAME} app icon`} />
+    <meta property="og:image:type" content={ogImageType} />
+    <meta property="og:image:width" content={ogImageWidth} />
+    <meta property="og:image:height" content={ogImageHeight} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    <meta name="twitter:image:alt" content={`${APP_NAME} app icon`} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <StructuredData />
   </head>

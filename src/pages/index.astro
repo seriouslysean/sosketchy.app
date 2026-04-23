@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import Footer from '../components/Footer.astro';
+import { APP_NAME } from '../utils/env';
 import icon from '../assets/icon.png';
 ---
 
@@ -19,7 +20,7 @@ import icon from '../assets/icon.png';
         fetchpriority="high"
         decoding="sync"
       />
-      <h1 class="hero__title">So Sketchy</h1>
+      <h1 class="hero__title">{APP_NAME}</h1>
     </article>
   </main>
   <Footer />

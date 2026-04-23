@@ -1,7 +1,7 @@
 ---
 import Doc from '../layouts/Doc.astro';
 import SiteLink from '../components/SiteLink.astro';
-import { APP_NAME, SUPPORT_EMAIL } from 'astro:env/client';
+import { APP_NAME, SUPPORT_EMAIL } from '../utils/env';
 ---
 
 <Doc
@@ -31,7 +31,7 @@ import { APP_NAME, SUPPORT_EMAIL } from 'astro:env/client';
     <p>
       Open a Messages conversation, tap the {APP_NAME} icon from the
       row of iMessage apps below your text field, draw the word you're
-      given, and send the drawing back for the other player to guess.
+      given, and send the drawing back for your friend to guess.
     </p>
 
     <h3>Why didn't my drawing send?</h3>
