@@ -1,26 +1,29 @@
 ---
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { APP_NAME } from '../utils/env';
-import icon from '../assets/icon.png';
+import splashArt from '../assets/splash-art.png';
 ---
 
 <Base>
+  <Header />
   <main id="main">
-    <article class="hero">
+    <article class="splash">
       <Image
-        class="hero__icon"
-        src={icon}
+        class="splash__art"
+        src={splashArt}
         alt=""
-        width={160}
-        height={160}
+        width={1024}
+        height={819}
         densities={[1, 2]}
+        sizes="(max-width: 48rem) calc(100vw - 2rem), 44rem"
         loading="eager"
         fetchpriority="high"
         decoding="sync"
       />
-      <h1 class="hero__title">{APP_NAME}</h1>
+      <h1 class="splash__title">So Sketchy</h1>
+      <p class="splash__sub">A drawing game inside iMessage.</p>
     </article>
   </main>
   <Footer />

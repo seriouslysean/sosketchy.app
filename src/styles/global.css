@@ -137,33 +137,6 @@
     box-shadow: 0 1px 2px rgb(0 0 0 / 0.08);
   }
 
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(1.25rem, 3.5vw, 2rem);
-    text-align: center;
-    max-inline-size: 32rem;
-  }
-
-  .hero__icon {
-    inline-size: clamp(7.5rem, 22vw, 10rem);
-    aspect-ratio: 1;
-    border-radius: clamp(1.25rem, 4vw, 1.75rem);
-    box-shadow:
-      0 1px 2px rgb(0 0 0 / 0.04),
-      0 8px 24px -6px rgb(from var(--coral) r g b / 0.25);
-  }
-
-  .hero__title {
-    font-size: clamp(2.75rem, 9vw, 4.5rem);
-    font-weight: 800;
-    letter-spacing: -0.035em;
-    line-height: 1;
-    color: var(--coral);
-    text-wrap: balance;
-  }
-
   .splash {
     display: flex;
     flex-direction: column;
@@ -190,13 +163,13 @@
       0 10px 28px -10px rgb(0 0 0 / 0.18);
   }
 
-  body:has(.splash) {
+  body:has(.splash--fit) {
     block-size: 100dvh;
     min-block-size: 0;
     overflow: hidden;
   }
 
-  body:has(.splash) main {
+  body:has(.splash--fit) main {
     padding-block: clamp(0.75rem, 2vw, 1.25rem);
     min-block-size: 0;
   }
@@ -208,6 +181,13 @@
     line-height: 1.15;
     color: var(--coral);
     text-wrap: balance;
+  }
+
+  .splash__sub {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    color: var(--ink-soft);
+    text-wrap: balance;
+    max-inline-size: 32rem;
   }
 
   .splash__badge {
