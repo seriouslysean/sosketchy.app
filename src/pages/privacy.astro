@@ -16,20 +16,16 @@ const effectiveDateLabel = 'April 23, 2026';
   </header>
 
   <p>
-    {APP_NAME} has no game server. Drawings, guesses, and game state
-    travel through Messages and stay with Apple services you choose to
-    use, such as Messages, Photos, and iCloud. We do not receive your
-    drawings, guesses, contacts, message contents, or payment
-    information.
+    {APP_NAME} has no server. We do not receive your drawings, guesses,
+    contacts, message contents, or payment information.
   </p>
 
   <section>
-    <h2>Optional analytics</h2>
+    <h2>Analytics</h2>
     <p>
-      If you turn on anonymous analytics in the app's Settings screen,
-      TelemetryDeck receives anonymous usage analytics from the app.
+      Analytics are off by default. If you turn them on in the app's
+      Settings screen, TelemetryDeck receives:
     </p>
-    <p>TelemetryDeck may receive:</p>
     <ul>
       <li>An anonymized installation ID.</li>
       <li>Event names, such as app launches, pack picks, restore results, and save actions.</li>
@@ -37,36 +33,15 @@ const effectiveDateLabel = 'April 23, 2026';
       <li>App and device metadata, such as app version, build, OS version, and device type.</li>
       <li>Limited event metadata, such as pack IDs, counts, and timing values.</li>
     </ul>
-    <p>TelemetryDeck does not receive:</p>
-    <ul>
-      <li>Drawings, guesses, message contents, contacts, or Photos library contents.</li>
-      <li>Payment information.</li>
-      <li>Stored IP addresses, cookies, or cross-app tracking data.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>How we use analytics</h2>
     <p>
-      We use this data to understand feature usage, diagnose failures,
-      and improve the app. We do not use it for advertising, profiling,
-      or sale.
+      TelemetryDeck does not receive stored IP addresses, cookies, or
+      cross-app tracking data.
     </p>
-  </section>
-
-  <section>
-    <h2>Legal basis</h2>
     <p>
-      We process anonymous analytics on the basis of your consent. You
-      can withdraw consent at any time in the app's Settings screen.
-    </p>
-  </section>
-
-  <section>
-    <h2>Turn analytics off</h2>
-    <p>
-      You can turn analytics off in the app's Settings screen. While
-      that setting is off, new analytics events are not sent.
+      We use analytics to understand feature usage, diagnose failures,
+      and improve the app. We do not use them for advertising,
+      profiling, or sale. We process them on the basis of your consent,
+      which you can withdraw at any time in the app's Settings screen.
     </p>
   </section>
 
@@ -80,23 +55,11 @@ const effectiveDateLabel = 'April 23, 2026';
         aria-label="TelemetryDeck privacy policy, opens in new tab"
       >telemetrydeck.com/privacy</SiteLink>&#8288;.
     </p>
-    <p>
-      App Store purchases are handled by Apple under <SiteLink
-        href="https://www.apple.com/legal/privacy/"
-        target="_blank"
-        aria-label="Apple's privacy policy, opens in new tab"
-      >Apple's privacy policy</SiteLink>&#8288;.
-    </p>
   </section>
 
   <section>
-    <h2>Retention and deletion</h2>
-    <p>
-      Anonymous analytics are retained by TelemetryDeck under their
-      own policy. Data you create in the app stays on your device, in
-      Messages, in Photos, or in your iCloud account when you use
-      those Apple services.
-    </p>
+    <h2>Retention</h2>
+    <p>Anonymous analytics are retained by TelemetryDeck under their own policy.</p>
   </section>
 
   <section>
@@ -105,29 +68,21 @@ const effectiveDateLabel = 'April 23, 2026';
   </section>
 
   <section>
-    <h2>Contact</h2>
+    <h2>Children's privacy</h2>
     <p>
-      If you email support or send a word report, we receive the email
-      address and message content you send us.
-    </p>
-    <p>
-      Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>&#8288; with privacy questions.
+      So Sketchy is not directed to children under 13 and does not
+      knowingly collect personal information from them.
     </p>
   </section>
 
   <section>
     <h2>Who we are</h2>
     <p>
-      So Sketchy is published by {BUSINESS_NAME}. The footer on every
-      page links to {BUSINESS_NAME}'s site.
-    </p>
-  </section>
-
-  <section>
-    <h2>Children's privacy</h2>
-    <p>
-      So Sketchy is not directed to children under 13 and does not
-      knowingly collect personal information from them.
+      So Sketchy is published by {BUSINESS_NAME}. Email <SiteLink
+        href={`mailto:${SUPPORT_EMAIL}`}
+      >{SUPPORT_EMAIL}</SiteLink>&#8288; with privacy questions or to
+      request access to or deletion of personal information we hold
+      about you.
     </p>
   </section>
 
