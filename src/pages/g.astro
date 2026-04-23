@@ -1,18 +1,15 @@
 ---
-import { Image } from 'astro:assets';
 import Splash from '../layouts/Splash.astro';
-import SiteLink from '../components/SiteLink.astro';
-import AppStoreBadge from '../assets/app-store-badge.svg';
+import SplashContent from '../components/SplashContent.astro';
+import Footer from '../components/Footer.astro';
 import { copy, formatCopy } from '../i18n/copy';
-import { APP_NAME, APP_STORE_URL } from '../utils/env';
-import splashArt from '../assets/splash-art.png';
+import { APP_NAME } from '../utils/env';
 
 const pageCopy = copy.pages.g;
 const title = pageCopy.title;
 const description = APP_NAME
   ? formatCopy(pageCopy.description, { appName: APP_NAME })
   : pageCopy.descriptionFallback;
-const badgeAlt = copy.common.downloadAppStore;
 ---
 
 <Splash title={title} description={description} noindex referrer="no-referrer">
@@ -25,29 +22,6 @@ const badgeAlt = copy.common.downloadAppStore;
       );
     }
   </script>
-  <article class="splash splash--fit">
-    <Image
-      class="splash__art"
-      src={splashArt}
-      alt=""
-      width={1024}
-      height={819}
-      densities={[1, 2]}
-      sizes="(max-width: 48rem) calc(100vw - 2rem), 44rem"
-      loading="eager"
-      fetchpriority="high"
-      decoding="sync"
-    />
-    <h1 class="splash__title">{APP_NAME}</h1>
-    <p class="splash__sub">{title}</p>
-    {APP_STORE_URL ? (
-      <SiteLink class="splash__badge" href={APP_STORE_URL} aria-label={badgeAlt}>
-        <AppStoreBadge aria-hidden="true" focusable="false" />
-      </SiteLink>
-    ) : (
-      <span class="splash__badge splash__badge--disabled" role="img" aria-label={badgeAlt} aria-disabled="true">
-        <AppStoreBadge aria-hidden="true" focusable="false" />
-      </span>
-    )}
-  </article>
+  <SplashContent subtitle={title} />
+  <Footer slot="footer" />
 </Splash>
