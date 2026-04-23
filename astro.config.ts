@@ -20,7 +20,7 @@ export default defineConfig({
   },
   integrations: [
     sitemap({
-      filter: (page) => !page.endsWith('.txt') && !/\/g\/?$/.test(page),
+      filter: (page) => !page.endsWith('.txt') && !/\/(?:g|404)\/?$/.test(page),
     }),
   ],
   env: {
