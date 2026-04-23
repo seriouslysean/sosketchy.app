@@ -32,7 +32,7 @@ const defaultOgImageAlt = APP_NAME
   : copy.site.defaultOgImageAltFallback;
 
 const {
-  title = APP_NAME,
+  title: section,
   description = defaultDescription,
   noindex = false,
   referrer = 'strict-origin-when-cross-origin',
@@ -42,6 +42,8 @@ const {
   ogImageHeight = defaultOgImage.attributes.height,
   ogImageAlt = defaultOgImageAlt,
 } = Astro.props;
+
+const title = [APP_NAME, section].filter(Boolean).join(' | ');
 
 const canonical = getFullUrl(Astro.url.pathname);
 const ogImage = getFullUrl(ogImagePath);
