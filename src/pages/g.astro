@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import Base from '../layouts/Base.astro';
-import Header from '../components/Header.astro';
+import Splash from '../layouts/Splash.astro';
 import SiteLink from '../components/SiteLink.astro';
 import AppStoreBadge from '../assets/app-store-badge.svg';
 import { copy, formatCopy } from '../i18n/copy';
@@ -16,7 +15,7 @@ const description = APP_NAME
 const badgeAlt = copy.common.downloadAppStore;
 ---
 
-<Base title={title} description={description} noindex referrer="no-referrer">
+<Splash title={title} description={description} noindex referrer="no-referrer">
   <script is:inline>
     if (window.location.search) {
       window.history.replaceState?.(
@@ -26,32 +25,29 @@ const badgeAlt = copy.common.downloadAppStore;
       );
     }
   </script>
-  <Header />
-  <main id="main">
-    <article class="splash splash--fit">
-      <Image
-        class="splash__art"
-        src={splashArt}
-        alt=""
-        width={1024}
-        height={819}
-        densities={[1, 2]}
-        sizes="(max-width: 48rem) calc(100vw - 2rem), 44rem"
-        loading="eager"
-        fetchpriority="high"
-        decoding="sync"
-      />
-      <h1 class="splash__title">{APP_NAME}</h1>
-      <p class="splash__sub">{title}</p>
-      {APP_STORE_URL ? (
-        <SiteLink class="splash__badge" href={APP_STORE_URL} aria-label={badgeAlt}>
-          <AppStoreBadge aria-hidden="true" focusable="false" />
-        </SiteLink>
-      ) : (
-        <span class="splash__badge splash__badge--disabled" role="img" aria-label={badgeAlt} aria-disabled="true">
-          <AppStoreBadge aria-hidden="true" focusable="false" />
-        </span>
-      )}
-    </article>
-  </main>
-</Base>
+  <article class="splash splash--fit">
+    <Image
+      class="splash__art"
+      src={splashArt}
+      alt=""
+      width={1024}
+      height={819}
+      densities={[1, 2]}
+      sizes="(max-width: 48rem) calc(100vw - 2rem), 44rem"
+      loading="eager"
+      fetchpriority="high"
+      decoding="sync"
+    />
+    <h1 class="splash__title">{APP_NAME}</h1>
+    <p class="splash__sub">{title}</p>
+    {APP_STORE_URL ? (
+      <SiteLink class="splash__badge" href={APP_STORE_URL} aria-label={badgeAlt}>
+        <AppStoreBadge aria-hidden="true" focusable="false" />
+      </SiteLink>
+    ) : (
+      <span class="splash__badge splash__badge--disabled" role="img" aria-label={badgeAlt} aria-disabled="true">
+        <AppStoreBadge aria-hidden="true" focusable="false" />
+      </span>
+    )}
+  </article>
+</Splash>
