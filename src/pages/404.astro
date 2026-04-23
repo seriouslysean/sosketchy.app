@@ -1,11 +1,13 @@
 ---
-import Doc from '../layouts/Doc.astro';
-import SiteLink from '../components/SiteLink.astro';
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
 ---
 
-<Doc title="Not Drawn" description="This page doesn't exist." noindex>
-  <header class="doc__header">
-    <h1>404 Not Drawn.</h1>
-    <p>Head back to <SiteLink href="/">the start</SiteLink>&#8288;.</p>
-  </header>
-</Doc>
+<Base title="404 Not Drawn" noindex>
+  <Header />
+  <main id="main">
+    <article class="splash">
+      <h1 class="splash__title">404 Not Drawn.</h1>
+    </article>
+  </main>
+</Base>
