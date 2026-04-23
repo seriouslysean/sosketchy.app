@@ -1,7 +1,6 @@
 ---
 import Splash from '../layouts/Splash.astro';
 import SplashContent from '../components/SplashContent.astro';
-import Footer from '../components/Footer.astro';
 import { copy, formatCopy } from '../i18n/copy';
 import { APP_NAME } from '../utils/env';
 
@@ -23,5 +22,4 @@ const description = APP_NAME
     }
   </script>
   <SplashContent subtitle={title} />
-  <Footer slot="footer" />
 </Splash>

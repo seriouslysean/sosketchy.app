@@ -1,5 +1,6 @@
 ---
 import Base from './Base.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
@@ -15,5 +16,5 @@ const { title, description, noindex, referrer } = Astro.props;
   <main id="main">
     <slot />
   </main>
-  <slot name="footer" />
+  <Footer />
 </Base>
