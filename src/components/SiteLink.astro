@@ -13,6 +13,4 @@ const finalHref = isPassthrough ? href : getUrl(href);
 const finalRel = attrs.target === '_blank' && !rel ? 'noopener noreferrer' : rel;
 ---
 
-<a href={finalHref} rel={finalRel} class={className} {...attrs}>
-  <slot />
-</a>
+<a href={finalHref} rel={finalRel} class={className} {...attrs}><slot /></a>
