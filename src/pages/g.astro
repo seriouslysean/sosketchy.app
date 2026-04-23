@@ -41,7 +41,8 @@ const badgeAlt = copy.common.downloadAppStore;
         fetchpriority="high"
         decoding="sync"
       />
-      <h1 class="splash__title">{title}</h1>
+      <h1 class="splash__title">{APP_NAME}</h1>
+      <p class="splash__sub">{title}</p>
       {APP_STORE_URL ? (
         <SiteLink class="splash__badge" href={APP_STORE_URL} aria-label={badgeAlt}>
           <AppStoreBadge aria-hidden="true" focusable="false" />

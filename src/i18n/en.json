@@ -9,6 +9,9 @@
     "defaultOgImageAltFallback": "Drawing preview"
   },
   "pages": {
+    "home": {
+      "subtitle": "A drawing game inside iMessage"
+    },
     "g": {
       "title": "Want to guess what your friend drew?",
       "description": "Open {appName} to see your friend's drawing.",
