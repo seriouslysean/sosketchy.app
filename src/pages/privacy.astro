@@ -1,7 +1,7 @@
 ---
 import Doc from '../layouts/Doc.astro';
 import SiteLink from '../components/SiteLink.astro';
-import { APP_NAME, BUSINESS_NAME, SUPPORT_EMAIL } from '../utils/env';
+import { APP_NAME, SUPPORT_EMAIL } from '../utils/env';
 
 const effectiveDateISO = '2026-08-29';
 const effectiveDateLabel = 'August 29, 2026';
@@ -15,23 +15,24 @@ const effectiveDateLabel = 'August 29, 2026';
     <h1>Privacy</h1>
   </header>
 
-  <p>We are {BUSINESS_NAME}, the publisher of {APP_NAME}.</p>
-
   <section>
     <h2>Analytics</h2>
     <p>
-      We use <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink> to understand how {APP_NAME} is used and to
-      improve the app. The app sends information about app use, purchases,
-      crashes, performance, and app, device, and settings details. It also sends a one-way hash of a random ID made
-      for that installation. The ID stays the same until the app's data is
-      reset or the app is uninstalled.
+      {APP_NAME} automatically sends the following information to <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink>: app use,
+      purchases, crashes, performance, app and device details, accessibility
+      settings, color scheme, language, layout direction, and region. We use
+      this information to understand how {APP_NAME} is used and improve the app.
     </p>
     <p>
-      You can stop
-      future analytics in the app's settings. This does not remove information
-      already sent. We do not set a fixed deletion date for past analytics.
-      Because we cannot connect those records to your name or email address, we
-      cannot find and delete one person's analytics.
+      It also sends a one-way hash of a random ID made for that installation.
+      The ID stays the same until the app's data is reset or the app is
+      uninstalled.
+    </p>
+    <p>
+      You can stop future analytics in the app's settings. This does not remove
+      information already sent. We do not set a fixed deletion date for past
+      analytics. Because we cannot connect those records to your name or email
+      address, we cannot find and delete one person's analytics.
     </p>
     <p>
       TelemetryDeck will provide the same or equal protection for analytics data
@@ -45,29 +46,28 @@ const effectiveDateLabel = 'August 29, 2026';
       If you send us a content report, the email includes your reason, the
       round ID, app version, and build number. The report comes from your email
       account, so we receive that email address. A drawing is included only if
-      you choose to attach it.
+      you choose to attach it. We use this information to review the reported
+      content.
     </p>
     <p>
-      We keep report emails in our support inbox. You can ask us to remove your
-      report from that inbox by emailing <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the same address used to send it.
+      We keep report emails in our support inbox until you ask us to remove your
+      report by emailing <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address used to send it.
     </p>
   </section>
 
   <section>
     <h2>Tracking</h2>
     <p>
-      This app does not track what you do in other companies' apps or on their
-      websites, and no one else uses it to do that.
+      No other party collects personally identifiable information about your
+      online activities over time and across different websites or online
+      services when you use {APP_NAME}.
     </p>
   </section>
 
   <section>
-    <h2>Changes and contact</h2>
-    <p>
-      We may update this policy as {APP_NAME} changes. Questions about this
-      policy can be sent to <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>.
-    </p>
+    <h2>Changes</h2>
+    <p>We will post material changes to this policy on this page.</p>
   </section>
 
-  <footer class="doc__meta">Effective <time datetime={effectiveDateISO}>{effectiveDateLabel}</time></footer>
+  <footer class="doc__meta">Effective <time datetime={effectiveDateISO}>{effectiveDateLabel}</time>.</footer>
 </Doc>
