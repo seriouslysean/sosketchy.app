@@ -20,55 +20,59 @@ const effectiveDateLabel = 'August 29, 2026';
   <section>
     <h2>Analytics</h2>
     <p>
-      {APP_NAME} automatically sends the following information to <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink>: app use,
-      purchases, crashes, performance, app and device details, accessibility
-      settings, color scheme, language, layout direction, and region. We use
-      this information to understand how {APP_NAME} is used and improve the app.
+      {APP_NAME} sends usage information to <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink>. That covers how you
+      use the app, what you buy, crashes, how well the app runs, and details
+      about your app, device, and settings. Those details include your
+      accessibility settings, color scheme, language, layout direction, and
+      region. We use all of it to see how people play and to make the app
+      better.
     </p>
     <p>
-      It also sends a one-way hash of a random ID made for that installation.
-      The ID stays the same until the app's data is reset or the app is
-      uninstalled.
+      The app also makes a random ID for your copy of {APP_NAME} and sends a
+      scrambled version of it. That ID stays the same until you reset the app's
+      data or delete the app.
     </p>
     <p>
-      You can stop future analytics in the app's settings. This does not remove
-      information already sent. We do not set a fixed deletion date for past
-      analytics. Because we cannot connect those records to your name or email
-      address, we cannot find and delete one person's analytics.
+      You can turn analytics off in the app's settings. That stops new
+      information from being sent. It does not delete what was already sent. We
+      do not set a date for deleting old records, and those records have no name
+      or email in them, so we cannot find one person's records to delete.
     </p>
     <p>
-      TelemetryDeck will provide the same or equal protection for analytics data
-      as this policy and Apple's rules require.
+      TelemetryDeck has to protect this data at least as well as this policy and
+      Apple's rules require.
     </p>
   </section>
 
   <section>
     <h2>Content reports</h2>
     <p>
-      If you send us a content report, the email includes your reason, the
-      round ID, app version, and build number. The report comes from your email
-      account, so we receive that email address. A drawing is included only if
-      you choose to attach it. We use this information to review the reported
-      content.
+      If you send us a content report, the email includes your reason, the round
+      ID, the app version, and the build number. It comes from your own email
+      account, so we get that email address too. Your drawing is included only
+      if you choose to attach it. We use all of this to look into what you
+      reported.
     </p>
     <p>
-      We keep report emails in our support inbox until you ask us to remove your
-      report by emailing <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address used to send it.
+      We keep report emails in our support inbox. You can ask us to delete yours
+      by emailing <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address you sent it from.
     </p>
   </section>
 
   <section>
     <h2>Tracking</h2>
     <p>
-      No other party collects personally identifiable information about your
-      online activities over time and across different websites or online
-      services when you use {APP_NAME}.
+      No one uses {APP_NAME} to track what you do on other websites or in other
+      companies' apps.
     </p>
   </section>
 
   <section>
     <h2>Changes</h2>
-    <p>We will post material changes to this policy on this page.</p>
+    <p>
+      If we make important changes to this policy, we will post them on this
+      page.
+    </p>
   </section>
 
   <footer class="doc__meta">Effective <time datetime={effectiveDateISO}>{effectiveDateLabel}</time>.</footer>
