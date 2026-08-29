@@ -20,20 +20,19 @@ const effectiveDateLabel = 'August 29, 2026';
   <section>
     <h2>Analytics</h2>
     <p>
-      {APP_NAME} sends usage information to <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink>. That covers how you
-      use the app, what you buy, crashes, how well the app runs, and details
-      about your app, device, and settings. Those details include your
-      accessibility settings, color scheme, language, layout direction, and
-      region. We use all of it to see how people play and to make the app
-      better.
+      {APP_NAME} sends usage information to <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink>. That covers app use,
+      purchases, crashes, how well the app runs, and details about the app,
+      device, and settings. Those details include accessibility settings, color
+      scheme, language, layout direction, and region. We use all of it to see
+      how people play and to make the app better.
     </p>
     <p>
-      The app also makes a random ID for your copy of {APP_NAME} and sends a
-      scrambled version of it. That ID stays the same until you reset the app's
-      data or delete the app.
+      The app also makes a random ID for each install and sends a scrambled
+      version of it. That ID stays the same until the app's data is reset or the
+      app is deleted.
     </p>
     <p>
-      You can turn analytics off in the app's settings. That stops new
+      Analytics can be turned off in the app's settings. That stops new
       information from being sent. It does not delete what was already sent. We
       do not set a date for deleting old records, and those records have no name
       or email in them, so we cannot find one person's records to delete.
@@ -47,22 +46,21 @@ const effectiveDateLabel = 'August 29, 2026';
   <section>
     <h2>Content reports</h2>
     <p>
-      If you send us a content report, the email includes your reason, the round
-      ID, the app version, and the build number. It comes from your own email
-      account, so we get that email address too. Your drawing is included only
-      if you choose to attach it. We use all of this to look into what you
-      reported.
+      A content report arrives as an email. It includes the reason, the round
+      ID, the app version, and the build number. It is sent from the reporter's
+      own email account, so we get that email address too. A drawing is included
+      only if the reporter chooses to attach it. We use all of this to look into
+      the report.
     </p>
     <p>
-      We keep report emails in our support inbox. You can ask us to delete yours
-      by emailing <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address you sent it from.
+      Report emails stay in our support inbox. To have one deleted, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address it was sent from.
     </p>
   </section>
 
   <section>
     <h2>Tracking</h2>
     <p>
-      No one uses {APP_NAME} to track what you do on other websites or in other
+      No one uses {APP_NAME} to track activity on other websites or in other
       companies' apps.
     </p>
   </section>
