@@ -15,82 +15,53 @@ const effectiveDateLabel = 'August 29, 2026';
     <h1>Privacy</h1>
   </header>
 
+  <p>We are {BUSINESS_NAME}, the publisher of {APP_NAME}.</p>
+
+  <section>
+    <h2>Game data</h2>
+    <p>
+      The drawings you send as game messages go through Messages, not to us.
+    </p>
+  </section>
+
   <section>
     <h2>Analytics</h2>
     <p>
-      When analytics is on, the app sends the following to an outside
-      analytics service:
-    </p>
-    <ul>
-      <li>
-        A random ID for your copy of the app. It stays the same until you
-        reset your data or delete the app. It is not your name, your
-        account, or your device ID.
-      </li>
-      <li>Which features you use, which packs you pick, and what you buy.</li>
-      <li>Crash and performance reports.</li>
-      <li>
-        Your app version, device type, screen size, language, region, and
-        time zone.
-      </li>
-      <li>How often you play and how long you play.</li>
-      <li>
-        Which accessibility settings you have turned on, such as Reduce
-        Motion or Bold Text.
-      </li>
-    </ul>
-    <p>
-      We use this to see which features people use, find bugs, and make the
-      app better.
+      We use <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink> to understand how {APP_NAME} is used and to
+      improve the app. The app sends information about app use, purchases,
+      crashes, performance, and app, device, and settings details, including
+      accessibility settings. It also sends a one-way hash of a random ID made
+      for that installation. The ID stays the same until the app's data is
+      reset or the app is uninstalled.
     </p>
     <p>
-      The service has to protect this data at least as well as this policy
-      and Apple require.
-    </p>
-    <p>
-      You can turn analytics off in the app under Settings, then Privacy.
-      That stops new data from being sent. It does not delete data that was
-      already sent. The service does not promise a date when it deletes old
-      records.
+      Analytics records do not include your name or email address. You can stop
+      future analytics in the app's settings. This does not remove information
+      already sent. We do not set a fixed deletion date for past analytics.
+      Because we cannot connect those records to your name or email address, we
+      cannot find and delete one person's analytics.
     </p>
   </section>
 
   <section>
     <h2>Content reports</h2>
-    <p>If you send us a content report, we receive:</p>
-    <ul>
-      <li>The email address you send it from.</li>
-      <li>The reason you write.</li>
-      <li>The round ID, the app version, and the build number.</li>
-      <li>The drawing, but only if you choose to attach it.</li>
-    </ul>
     <p>
-      We use reports to look into the problem and decide what to do. We keep
-      a report only as long as we need it for that. To have your report
-      deleted, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address you sent it from.
+      If you send us a content report, the email includes your reason, the
+      round ID, app version, and build number. The report comes from your email
+      account, so we receive that email address. A drawing is included only if
+      you choose to attach it.
+    </p>
+    <p>
+      We keep report emails in our support inbox. You can ask us to remove your
+      report from that inbox by emailing <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the same address used to send it.
     </p>
   </section>
 
   <section>
-    <h2>Tracking</h2>
+    <h2>Changes and contact</h2>
     <p>
-      We do not track what you do in other companies' apps or on their
-      websites. Neither does our analytics service.
-    </p>
-  </section>
-
-  <section>
-    <h2>Changes</h2>
-    <p>
-      If we make important changes to this policy, we will post them on this
-      page and update the date below.
-    </p>
-  </section>
-
-  <section>
-    <h2>Who we are</h2>
-    <p>
-      {APP_NAME} is published by {BUSINESS_NAME}. Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> with privacy questions.
+      We may update this policy as {APP_NAME} changes. Questions about this
+      policy can be sent to <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink>.
     </p>
   </section>
 
