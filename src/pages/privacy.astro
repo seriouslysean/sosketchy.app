@@ -1,7 +1,7 @@
 ---
 import Doc from '../layouts/Doc.astro';
 import SiteLink from '../components/SiteLink.astro';
-import { APP_NAME, SUPPORT_EMAIL } from '../utils/env';
+import { APP_NAME, BUSINESS_NAME, SUPPORT_EMAIL } from '../utils/env';
 
 const effectiveDateISO = '2026-08-29';
 const effectiveDateLabel = 'August 29, 2026';
@@ -14,6 +14,8 @@ const effectiveDateLabel = 'August 29, 2026';
   <header class="doc__header">
     <h1>Privacy</h1>
   </header>
+
+  <p>{APP_NAME} is published by {BUSINESS_NAME}.</p>
 
   <section>
     <h2>Analytics</h2>
