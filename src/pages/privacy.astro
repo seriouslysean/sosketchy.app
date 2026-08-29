@@ -20,20 +20,24 @@ const effectiveDateLabel = 'August 29, 2026';
   <section>
     <h2>Analytics</h2>
     <p>
-      {APP_NAME} sends <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink> app use, purchases, crashes, how well the
-      app runs, and app, device, and settings details, including accessibility
-      settings, color scheme, language, layout direction, and region. It also
-      sends a scrambled random ID, one per install, that lasts until the app's
-      data is reset or the app is deleted. We use all of it to improve the app.
+      {APP_NAME} sends analytics to <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink>. This data includes app use,
+      purchases, crashes, performance, app and device details, and settings
+      details. Settings details include accessibility settings, color scheme,
+      language, layout direction, and region. The data helps improve the app.
     </p>
     <p>
-      Analytics can be turned off in the app's settings. That stops new data but
-      does not delete what was sent. We set no deletion date, and the records
-      hold no name or email, so one person's records cannot be found and
-      deleted.
+      A random ID is made for each install. It stays the same until the app's
+      data is reset or the app is deleted. The ID itself is not sent. The app
+      sends letters and numbers made from it.
     </p>
     <p>
-      TelemetryDeck has to protect this data at least as well as this policy and
+      Analytics can be turned off in the app's settings. No new analytics are
+      sent after that. Data already sent is not deleted. There is no set
+      deletion date. Sent records have no name, email, or other detail that ties
+      them to a person. One person's records cannot be found and deleted.
+    </p>
+    <p>
+      TelemetryDeck must protect this data at least as well as this policy and
       Apple's rules require.
     </p>
   </section>
@@ -41,12 +45,13 @@ const effectiveDateLabel = 'August 29, 2026';
   <section>
     <h2>Content reports</h2>
     <p>
-      A content report is an email carrying the reason, round ID, app version,
-      and build number, plus the reporter's email address and, only if they
-      attach it, the drawing. We use it to look into the report.
+      A content report is an email. It includes the reason, round ID, app
+      version, build number, and the reporter's email address. The drawing is
+      included only if the reporter attaches it. The report is used to review
+      the reported content.
     </p>
     <p>
-      Report emails stay in our support inbox. To have one deleted, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address it was sent from.
+      Report emails are kept in the support inbox. To remove one, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address that sent it.
     </p>
   </section>
 
@@ -60,7 +65,7 @@ const effectiveDateLabel = 'August 29, 2026';
 
   <section>
     <h2>Changes</h2>
-    <p>We post important changes to this policy here.</p>
+    <p>Important changes to this policy are posted here.</p>
   </section>
 
   <footer class="doc__meta">Effective <time datetime={effectiveDateISO}>{effectiveDateLabel}</time>.</footer>
