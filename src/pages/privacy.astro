@@ -3,87 +3,61 @@ import Doc from '../layouts/Doc.astro';
 import SiteLink from '../components/SiteLink.astro';
 import { APP_NAME, BUSINESS_NAME, SUPPORT_EMAIL } from '../utils/env';
 
-const effectiveDateISO = '2026-04-23';
-const effectiveDateLabel = 'April 23, 2026';
+const effectiveDateISO = '2026-09-02';
+const effectiveDateLabel = 'September 1, 2026';
 ---
 
 <Doc
   title="Privacy"
-  description={`How ${APP_NAME} handles data. Optional anonymous analytics via TelemetryDeck, no game-content server.`}
+  description={`How ${APP_NAME} handles data.`}
 >
   <header class="doc__header">
     <h1>Privacy</h1>
   </header>
 
-  <p>
-    {APP_NAME} has no server. We do not receive your drawings, guesses,
-    contacts, message contents, or payment information.
-  </p>
+  <p>{APP_NAME} is published by {BUSINESS_NAME}.</p>
 
   <section>
     <h2>Analytics</h2>
     <p>
-      Analytics can be disabled in the app's Settings screen. When
-      enabled, TelemetryDeck receives:
-    </p>
-    <ul>
-      <li>An anonymized installation ID.</li>
-      <li>Event names, such as app launches, pack picks, restore results, and save actions.</li>
-      <li>Rounded timestamps.</li>
-      <li>App and device metadata, such as app version, build, OS version, and device type.</li>
-      <li>Limited event metadata, such as pack IDs, counts, and timing values.</li>
-    </ul>
-    <p>
-      {BUSINESS_NAME} does not configure TelemetryDeck to receive IP
-      addresses, cookies, or cross-app tracking identifiers.
+      {APP_NAME} sends stats to <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink> only if you say yes when the app
+      first asks. The stats cover app use, purchases, crashes, performance, app
+      and device details, settings, and a random ID for each install.
     </p>
     <p>
-      We use analytics to understand feature usage, diagnose failures,
-      and improve the app. We do not use them for advertising,
-      profiling, or sale. You can disable analytics anytime in the
-      app's Settings screen.
+      You can change your answer in the app's settings. Data already sent is
+      kept with no set deletion date. It has no name or email, so your records
+      cannot be found or deleted.
+    </p>
+    <p>
+      TelemetryDeck must protect the data as required by this policy and Apple's
+      privacy rules.
     </p>
   </section>
 
   <section>
-    <h2>Third parties</h2>
+    <h2>Content reports</h2>
     <p>
-      TelemetryDeck GmbH processes the anonymous analytics described above. Their privacy policy is at <SiteLink href="https://telemetrydeck.com/privacy" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">telemetrydeck.com/privacy</SiteLink>.
+      Content reports are sent by email and include game data, the sender's
+      email address, and any attached drawing. They are used to review what was
+      reported.
+    </p>
+    <p>
+      Report emails are kept in the support inbox. To delete one, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address that sent it.
     </p>
   </section>
 
   <section>
-    <h2>Permissions</h2>
+    <h2>Tracking</h2>
     <p>
-      The app requests Photos access when you save a drawing. You can
-      change Photos access in iOS Settings.
+      Nothing in {APP_NAME} tracks activity in other apps or on websites.
     </p>
   </section>
 
   <section>
-    <h2>Retention</h2>
-    <p>TelemetryDeck retains anonymous analytics under its own policy.</p>
+    <h2>Changes</h2>
+    <p>Important changes to this policy are posted here.</p>
   </section>
 
-  <section>
-    <h2>Do Not Track</h2>
-    <p>This app does not track your online activities across third-party websites or services.</p>
-  </section>
-
-  <section>
-    <h2>Children's privacy</h2>
-    <p>
-      {APP_NAME} is not directed to children under 13 and does not
-      knowingly collect personal information from them.
-    </p>
-  </section>
-
-  <section>
-    <h2>Who we are</h2>
-    <p>
-      {APP_NAME} is published by {BUSINESS_NAME}. Email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> with privacy questions.
-    </p>
-  </section>
-
-  <footer class="doc__meta">Effective <time datetime={effectiveDateISO}>{effectiveDateLabel}</time></footer>
+  <footer class="doc__meta">Effective <time datetime={effectiveDateISO}>{effectiveDateLabel}</time>.</footer>
 </Doc>
