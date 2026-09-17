@@ -2,34 +2,34 @@
 import { APP_NAME, BUSINESS_NAME } from '../utils/env';
 import { getFullUrl } from '../utils/url-utils';
 
-const siteRoot = getFullUrl('/').replace(/\/$/, '');
+const siteRoot = getFullUrl('/');
 
 const graph = {
   '@context': 'https://schema.org',
   '@graph': [
     {
       '@type': 'Organization',
-      '@id': `${siteRoot}/#org`,
+      '@id': `${siteRoot}#org`,
       name: BUSINESS_NAME,
       url: siteRoot,
     },
     {
       '@type': 'WebSite',
-      '@id': `${siteRoot}/#site`,
+      '@id': `${siteRoot}#site`,
       url: siteRoot,
       name: APP_NAME,
       inLanguage: 'en',
-      publisher: { '@id': `${siteRoot}/#org` },
+      publisher: { '@id': `${siteRoot}#org` },
     },
     {
       '@type': 'SoftwareApplication',
-      '@id': `${siteRoot}/#app`,
+      '@id': `${siteRoot}#app`,
       name: APP_NAME,
       applicationCategory: 'GameApplication',
       operatingSystem: 'iOS 18',
       url: siteRoot,
       image: getFullUrl('/og-image.png'),
-      creator: { '@id': `${siteRoot}/#org` },
+      creator: { '@id': `${siteRoot}#org` },
     },
   ],
 };

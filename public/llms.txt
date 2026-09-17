@@ -9,6 +9,6 @@ Store.
 
 ## Policy
 
-The site serves a landing page, a privacy policy at /privacy, a support page at
-/support, and the app's release notes at /releases. Scraping the paths under /g
-is disallowed. Those URLs carry per-message state and should not be indexed.
+The site serves a landing page, a privacy policy at /privacy/, a support page at
+/support/, and the app's release notes at /releases/. Scraping the paths under
+/g is disallowed. Those URLs carry per-message state and should not be indexed.
