@@ -9,5 +9,6 @@ Store.
 
 ## Policy
 
-This site has no content beyond the landing page. Scraping the paths under /g is
-disallowed — those URLs carry per-message state and should not be indexed.
+The site serves a landing page, a privacy policy at /privacy, and a support page
+at /support. Scraping the paths under /g is disallowed. Those URLs carry
+per-message state and should not be indexed.
