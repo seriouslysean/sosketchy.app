@@ -194,23 +194,15 @@
     display: inline-block;
     margin-block-start: clamp(0.25rem, 1.5vw, 0.75rem);
     border-radius: 0.5rem;
-    transition: transform 0.15s ease;
 
+    /* Apple's badge guidelines: minimum 40px tall onscreen, and the artwork is
+       never modified, angled, or animated. Clear space on every side is at
+       least a quarter of the badge height, held by the splash flex gap. */
     & svg {
       display: block;
       block-size: clamp(2.75rem, 7vw, 3.25rem);
       inline-size: auto;
     }
-
-    &:hover,
-    &:focus-visible {
-      transform: translateY(-1px);
-    }
-  }
-
-  .splash__badge--disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
   }
 
   .site-footer {
@@ -319,6 +311,12 @@
   .doc__aside {
     color: var(--ink-soft);
     font-size: 0.9375rem;
+  }
+
+  .doc__date {
+    color: var(--ink-muted);
+    font-size: 0.8125rem;
+    margin-block-start: -0.25rem;
   }
 
   .doc__meta {

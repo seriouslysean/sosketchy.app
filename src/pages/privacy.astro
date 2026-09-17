@@ -3,8 +3,8 @@ import Doc from '../layouts/Doc.astro';
 import SiteLink from '../components/SiteLink.astro';
 import { APP_NAME, BUSINESS_NAME, SUPPORT_EMAIL } from '../utils/env';
 
-const effectiveDateISO = '2026-09-02';
-const effectiveDateLabel = 'September 1, 2026';
+const effectiveDateISO = '2026-09-17';
+const effectiveDateLabel = 'September 17, 2026';
 ---
 
 <Doc
@@ -21,8 +21,9 @@ const effectiveDateLabel = 'September 1, 2026';
     <h2>Analytics</h2>
     <p>
       {APP_NAME} sends stats to <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink> only if you say yes when the app
-      first asks. The stats cover app use, purchases, crashes, performance, app
-      and device details, settings, and a random ID for each install.
+      first asks. The stats cover app use, purchases, crashes, performance,
+      errors, app and device details such as your device model, OS version,
+      region, and language, and a random ID for each install.
     </p>
     <p>
       You can change your answer in the app's settings. Data already sent is
@@ -38,9 +39,13 @@ const effectiveDateLabel = 'September 1, 2026';
   <section>
     <h2>Content reports</h2>
     <p>
-      Content reports are sent by email and include game data, the sender's
-      email address, and any attached drawing. They are used to review what was
-      reported.
+      Content reports go out by email from your own mail account, so a report
+      carries your email address. Each one includes the round ID, the word
+      pack, how many guesses were made, the app version and build, and the
+      reason you type. Once the word is revealed it goes in too. The
+      drawing is attached only if you choose to attach it when the app asks,
+      and you can send the report without it. Reports are used to review what
+      was reported.
     </p>
     <p>
       Report emails are kept in the support inbox. To delete one, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address that sent it.

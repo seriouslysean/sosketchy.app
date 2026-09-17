@@ -1,0 +1,702 @@
+[
+ {
+  "version": "3.3.3",
+  "date": "2026-09-16",
+  "highlights": [
+   "Fix VoiceOver counts of one"
+  ]
+ },
+ {
+  "version": "3.3.2",
+  "date": "2026-09-14",
+  "highlights": [
+   "Open the word picker on iPad without the Messages prompt"
+  ]
+ },
+ {
+  "version": "3.3.1",
+  "date": "2026-09-12",
+  "highlights": [
+   "Fix the striped pattern on the Moonshot pack header",
+   "Stop word tag chips from hiding theme and color packs",
+   "Show that the round ended instead of a blank sheet",
+   "Fix the Resend button not sending the result",
+   "Fix confirmation dialogs sticking when something else takes over"
+  ]
+ },
+ {
+  "version": "3.3.0",
+  "date": "2026-09-11",
+  "highlights": [
+   "Fill only the tapped segment of a stroke",
+   "Keep Practice from touching your in-progress drawing",
+   "Reload only changed images in Favorites",
+   "Keep an unreadable bubble from replacing the next drawing",
+   "Scroll the consent card far enough to reach No thanks",
+   "Keep ROYGBIV unlocked after Reset Data"
+  ]
+ },
+ {
+  "version": "3.2.2",
+  "date": "2026-09-06",
+  "highlights": [
+   "Center the History hint arrow on the gear icon",
+   "Show the pack or word above the drawing",
+   "Fix the Launch Bundle banner's end date",
+   "Add a confirm step and finish message to Reset Hints"
+  ]
+ },
+ {
+  "version": "3.2.1",
+  "date": "2026-09-04",
+  "highlights": [
+   "Update internal development checks and documentation with nothing new on screen"
+  ]
+ },
+ {
+  "version": "3.2.0",
+  "date": "2026-09-04",
+  "highlights": [
+   "Fix replay not restarting after a memory warning",
+   "Fix VoiceOver announcing Playback complete after a canvas reset",
+   "Speed up fill on busy drawings",
+   "Stop showing the wrong pack name on bad messages",
+   "Preserve the shape of strokes that double back",
+   "Stop Shop prices from reloading over and over",
+   "Show Settings in five sections",
+   "Add a Settings row to reset all hints",
+   "Add Redeem Promo Code to the Shop",
+   "Fix the stuck nudge timer resetting when you return",
+   "Show an alert when the Shop fails to load",
+   "Keep the History hint together when the tray resizes",
+   "Match the Results heading to the guess count",
+   "Show the same release date to every reader"
+  ]
+ },
+ {
+  "version": "3.1.0",
+  "date": "2026-09-02",
+  "highlights": [
+   "Ask once whether to share usage data on first Main Menu open",
+   "Move Shuffle and Clear below the drawing",
+   "Point to Help after a wrong guess or an idle minute",
+   "Trim the pause at the end of saved replays",
+   "Show a theme's high contrast look when Increase Contrast is on",
+   "Stop the Shop's ownership label from truncating at large text sizes",
+   "Scroll long dialogs with a fade, and pin a lone button below",
+   "Move Restore Purchases to a quiet row below the Shop's pack grid",
+   "Show Tip Jar's thank you in its help card after first tip",
+   "Return to the word picker after discarding, with the word still there"
+  ]
+ },
+ {
+  "version": "3.0.0",
+  "date": "2026-08-28",
+  "highlights": [
+   "Place and take back letters with a VoiceOver double tap",
+   "Open every Shop card's detail with a VoiceOver double tap",
+   "Make VoiceOver's escape gesture cancel in purchase and delete dialogs",
+   "Keep every Main Menu action reachable at the largest text sizes",
+   "Apply Increase Contrast to any theme, not just Match System",
+   "Honor the iOS Only Draw with Apple Pencil setting",
+   "Switch tools with an Apple Pencil double tap",
+   "Choose whether a problem report includes your drawing",
+   "Save a replay video with one tap",
+   "Remove GIF replay export and its long-press dialog"
+  ]
+ },
+ {
+  "version": "2.0.0",
+  "date": "2026-08-27",
+  "highlights": [
+   "Recolor a stroke's whole connected same-color shape with one tap",
+   "Fill only gaps the app already closed, never at the edge",
+   "Fill a tapped speck the paint bucket used to skip",
+   "Speed up filling small areas with the paint bucket",
+   "Replay color changes in order, in the app and saved video",
+   "Show I'm Stuck after a wrong guess, Shuffle, Clear, or idle",
+   "Scroll Results as one page, with Play Again below the pack information",
+   "Add a home button to Results, Sent Drawing, word and pack pickers",
+   "Fit more strokes under the send limit",
+   "Refill the inkwell after Undo and Clear",
+   "Fit more actions into Main Menu",
+   "List the Launch Bundle's price, window and packs on banner and detail",
+   "Fix VoiceOver saying 1 guesses where it should say 1 guess",
+   "End VoiceOver's accessibility hints with a period for a consistent pause"
+  ]
+ },
+ {
+  "version": "1.47.0",
+  "date": "2026-08-20",
+  "highlights": [
+   "Stop the stroke flickering and snapping backward",
+   "Move the outcome and answer word above the drawing",
+   "Open the word's pack from Results, buy it if unowned",
+   "Stop showing a round as waiting 30 days after its turn starts",
+   "Fix remaining screens that showed an unconfirmed buy price",
+   "Let VoiceOver reach the buy action on every Shop row",
+   "Keep the drawing if a re-save fails after you cancel a send"
+  ]
+ },
+ {
+  "version": "1.46.1",
+  "date": "2026-08-15",
+  "highlights": [
+   "Show the waiting card again after reopening Messages",
+   "Restore the drawing when you resend it",
+   "Keep placed letters after a save fails"
+  ]
+ },
+ {
+  "version": "1.46.0",
+  "date": "2026-08-14",
+  "highlights": [
+   "Stop dropping drawings saved by a newer app version",
+   "Show a Time for an update card instead of Continue"
+  ]
+ },
+ {
+  "version": "1.45.0",
+  "date": "2026-08-13",
+  "highlights": [
+   "Add white to the palette through Edit palette",
+   "Hold a tile to drag, swipe the letter bank on long answers",
+   "Add an accent-tinted card to the selected word"
+  ]
+ },
+ {
+  "version": "1.44.0",
+  "date": "2026-08-11",
+  "highlights": [
+   "Encrypt saved drawings before they sync",
+   "Stop showing the previous account's drawings after switching iCloud",
+   "Fix the promo code sheet freezing on open",
+   "Stop rounds sticking on the loading card after you leave Messages",
+   "Hide the retry icon when iCloud is signed out",
+   "Show all free word packs at once instead of a drip schedule",
+   "Show that a first tip unlocks the ROYGBIV theme",
+   "Move the palette hint above the color strip",
+   "Count only real games toward the lifetime drawings total"
+  ]
+ },
+ {
+  "version": "1.43.0",
+  "date": "2026-07-30",
+  "highlights": [
+   "Let the not-loading card retry on tap",
+   "Show the drawing on the waiting card",
+   "Stop finished rounds from showing as waiting on other devices",
+   "Announce retry start and finish in VoiceOver"
+  ]
+ },
+ {
+  "version": "1.42.0",
+  "date": "2026-07-30",
+  "highlights": [
+   "Keep Main Menu's five rows in place as rounds change",
+   "Ask before Clear wipes the drawing",
+   "Add Try Again or Open iOS Settings to fixable errors",
+   "Fix dialogs flashing default colors",
+   "Show when a drawing is already saved to History"
+  ]
+ },
+ {
+  "version": "1.41.0",
+  "date": "2026-07-21",
+  "highlights": [
+   "Adjust analytics transport settings and documentation"
+  ]
+ },
+ {
+  "version": "1.40.0",
+  "date": "2026-07-21",
+  "highlights": [
+   "Show each palette color's name and family",
+   "Add an Edit cell to open palette edit mode",
+   "Move Save and Share side by side",
+   "Add a Pick a Pack button to Main Menu"
+  ]
+ },
+ {
+  "version": "1.39.4",
+  "date": "2026-07-18",
+  "highlights": [
+   "Update internal tools for vetting word packs"
+  ]
+ },
+ {
+  "version": "1.39.3",
+  "date": "2026-07-18",
+  "highlights": [
+   "Add decision and dataset rights registries",
+   "Add a release notes check before version bumps",
+   "Change how development agents get dispatched"
+  ]
+ },
+ {
+  "version": "1.39.2",
+  "date": "2026-07-17",
+  "highlights": [
+   "Add an automated simulator testing tool"
+  ]
+ },
+ {
+  "version": "1.39.1",
+  "date": "2026-07-17",
+  "highlights": [
+   "Add automated App Store screenshot capture for releases"
+  ]
+ },
+ {
+  "version": "1.39.0",
+  "date": "2026-07-17",
+  "highlights": [
+   "Collapse era headings in the pack picker",
+   "Collapse pack sections in the palette-swap sheet too",
+   "Keep small caption text legible on the rainbow themes",
+   "Let VoiceOver read the sample words on a pack's detail page"
+  ]
+ },
+ {
+  "version": "1.38.0",
+  "date": "2026-07-09",
+  "highlights": [
+   "Fix fill leaking where strokes touch",
+   "Fix the compact Results panel sitting off-center after a correct guess"
+  ]
+ },
+ {
+  "version": "1.37.0",
+  "date": "2026-07-07",
+  "highlights": [
+   "Fill the sharp point of a shape completely",
+   "Fix Save Replay wrongly reporting failure under Limited Photos Access",
+   "Add an opaque background behind shared drawings",
+   "Keep letters tappable after a wrong-guess flash",
+   "Fix your pack list after a refund or canceled restore",
+   "Animate moving between the Shop and the word picker",
+   "Stop double-tapping New Game or Continue Drawing from starting two rounds",
+   "Break a two-word answer into two words after guessing",
+   "Show confetti again for a second pack unlock",
+   "Keep long strokes up with your finger"
+  ]
+ },
+ {
+  "version": "1.36.0",
+  "date": "2026-07-02",
+  "highlights": [
+   "Draw more before the inkwell runs dry",
+   "Keep an erased fill erased during playback and sharing",
+   "Stop Play Again from discarding an unsent drawing",
+   "Open the result recap when you tap an older drawing",
+   "Add a Surprise Me button to the word picker",
+   "Add sound effects to drawing and guessing"
+  ]
+ },
+ {
+  "version": "1.35.0",
+  "date": "2026-06-24",
+  "highlights": [
+   "Add tap-to-fill that colors a shape without freezing the canvas",
+   "Recolor a fill by tapping it again"
+  ]
+ },
+ {
+  "version": "1.34.2",
+  "date": "2026-06-24",
+  "highlights": [
+   "Open a drawing made with the last drop of ink"
+  ]
+ },
+ {
+  "version": "1.34.1",
+  "date": "2026-06-22",
+  "highlights": [
+   "Fix broken word tiles on the compact Results screen"
+  ]
+ },
+ {
+  "version": "1.34.0",
+  "date": "2026-06-20",
+  "highlights": [
+   "Show the pack name and date on every word card",
+   "Unlock the free Doodlin' pack with code SOSKETCHY"
+  ]
+ },
+ {
+  "version": "1.33.0",
+  "date": "2026-06-18",
+  "highlights": [
+   "Add a promo code field to Settings that unlocks packs",
+   "Keep your last stroke or letter after coming back",
+   "Remove favorites everywhere when you reset app data"
+  ]
+ },
+ {
+  "version": "1.32.2",
+  "date": "2026-06-10",
+  "highlights": [
+   "Fix New Game staying dead after leaving iMessage mid-open",
+   "Deal words from bought packs into All Packs",
+   "Keep owned packs unlocked on a cold open",
+   "Show what Restore Purchases did",
+   "Keep your tip-reward palette through a reinstall or new device",
+   "Open Pick a Word for an unreadable save"
+  ]
+ },
+ {
+  "version": "1.32.0",
+  "date": "2026-06-01",
+  "highlights": [
+   "Rewrite help text and screen copy in one consistent voice",
+   "Suggest a new round instead of asking your friend to redraw"
+  ]
+ },
+ {
+  "version": "1.31.0",
+  "date": "2026-05-29",
+  "highlights": [
+   "Animate the wordmark in your theme's accent color",
+   "Animate word cards leaving one by one on Re-deal",
+   "Add a tooltip for long-pressing the first color slot",
+   "Keep I'm Stuck pinned at the bottom of the guessing screen"
+  ]
+ },
+ {
+  "version": "1.30.1",
+  "date": "2026-05-27",
+  "highlights": [
+   "Fix the last spot still showing Space Race instead of Moonshot"
+  ]
+ },
+ {
+  "version": "1.30.0",
+  "date": "2026-05-26",
+  "highlights": [
+   "Show a round in progress on another device, finish where you started",
+   "Fit a two-word answer inside the small Results strip",
+   "Restore press highlights on palette rows and Settings rows"
+  ]
+ },
+ {
+  "version": "1.29.3",
+  "date": "2026-05-24",
+  "highlights": [
+   "Show Release Notes back to the first build"
+  ]
+ },
+ {
+  "version": "1.29.2",
+  "date": "2026-05-23",
+  "highlights": [
+   "Show a favorite's thumbnail in its original colors",
+   "Add a Release Notes row to Settings"
+  ]
+ },
+ {
+  "version": "1.29.0",
+  "date": "2026-05-23",
+  "highlights": [
+   "Move VoiceOver focus back to where you were when a dialog closes",
+   "Remove the scale-and-slide dialog animation when Reduce Motion is on",
+   "Fix VoiceOver labels on favorite rows and navigation buttons",
+   "Match the pack picker's All Packs stripe to the theme",
+   "Speed up toggles in the Shop"
+  ]
+ },
+ {
+  "version": "1.28.0",
+  "date": "2026-05-21",
+  "highlights": [
+   "Add an owned and unowned filter to the Shop and pickers",
+   "Filter the palette picker by color family",
+   "Match color packs to word packs with era headings",
+   "Move Re-deal and Change Pack away from the word cards"
+  ]
+ },
+ {
+  "version": "1.27.0",
+  "date": "2026-05-20",
+  "highlights": [
+   "Move the bundle header's gradient slightly as you tilt your phone",
+   "Rename Forfeit to Discard in the drawing help menu"
+  ]
+ },
+ {
+  "version": "1.26.0",
+  "date": "2026-05-19",
+  "highlights": [
+   "Tap or long-press Save Replay to choose Video or GIF",
+   "Stop closing strokes from racing during saved replays",
+   "Rename Space Race to Moonshot",
+   "Rename Sunny Shores to Sun's Out",
+   "Rename First Day Back to Hall Pass to match the App Store"
+  ]
+ },
+ {
+  "version": "1.25.2",
+  "date": "2026-05-17",
+  "highlights": [
+   "Show a bigger buy button on the Shop's featured card",
+   "Close dialogs in one motion instead of snapping shut on a timer"
+  ]
+ },
+ {
+  "version": "1.25.1",
+  "date": "2026-05-17",
+  "highlights": [
+   "Fix over-long drawings failing to open with Can't Open Drawing"
+  ]
+ },
+ {
+  "version": "1.24.1",
+  "date": "2026-05-16",
+  "highlights": [
+   "Refresh the tip descriptions in the App Store purchase sheet"
+  ]
+ },
+ {
+  "version": "1.23.0",
+  "date": "2026-05-16",
+  "highlights": [
+   "Open the correct round when bubbles are tapped out of order",
+   "Add a bubble for New Game instead of replacing the old one",
+   "Move you to the current round from a stale bubble when possible"
+  ]
+ },
+ {
+  "version": "1.21.1",
+  "date": "2026-05-15",
+  "highlights": [
+   "Fix the bundle banner's buy button doing nothing when tapped",
+   "Match post-bundle confetti to the colors of packs you bought",
+   "Keep a favorited drawing marked when you return to it",
+   "Fix replay strokes looking over-thick until you skip ahead"
+  ]
+ },
+ {
+  "version": "1.20.0",
+  "date": "2026-05-14",
+  "highlights": [
+   "Show Continue Drawing in the compact strip for an unfinished drawing",
+   "Match the drawer's recap heading to the guesser's attempt count",
+   "Keep in-progress guesses across up to 100 conversations"
+  ]
+ },
+ {
+  "version": "1.19.0",
+  "date": "2026-05-13",
+  "highlights": [
+   "Add a discounted Launch Bundle with Noir, Silver Lining, and Space Race",
+   "Add Noir as a paid theme in the Shop",
+   "Show a send-your-drawing prompt in the compact strip"
+  ]
+ },
+ {
+  "version": "1.18.0",
+  "date": "2026-05-12",
+  "highlights": [
+   "Add a Give up option to the help menu",
+   "Show the recap answer as letter tiles instead of text",
+   "Stop force-quitting from skipping words ahead between deals",
+   "Add a Splitleaf logo and tappable credit to About"
+  ]
+ },
+ {
+  "version": "1.17.0",
+  "date": "2026-05-12",
+  "highlights": [
+   "Show sample words or pigment colors on Shop cards before buying",
+   "Add reset buttons for this device and all devices to Privacy",
+   "Fix multi-color drawings arriving near-black on other devices"
+  ]
+ },
+ {
+  "version": "1.16.0",
+  "date": "2026-05-11",
+  "highlights": [
+   "Show the same screen after sending or when a round ends",
+   "Keep strokes tracking your finger on long drawings",
+   "Stop Undo from bringing back a cleared drawing over new strokes"
+  ]
+ },
+ {
+  "version": "1.15.0",
+  "date": "2026-05-09",
+  "highlights": [
+   "Add two more tiles to the letter bank",
+   "Show the compact strip after sending, not the recap",
+   "Stop the inkwell meter from jumping back up mid-stroke"
+  ]
+ },
+ {
+  "version": "1.14.0",
+  "date": "2026-05-08",
+  "highlights": [
+   "Offer Restore and Request a Refund on a bought pack's page",
+   "Double-tap your Apple Pencil to switch Brush and Eraser",
+   "Cut busy drawing replays from 40-plus seconds to about 10"
+  ]
+ },
+ {
+  "version": "1.13.0",
+  "date": "2026-05-08",
+  "highlights": [
+   "Open the gray Silver Lining color pack for purchase",
+   "Stop a themed dialog from crashing the extension on open",
+   "Give inline pack purchases the same confetti as the detail page"
+  ]
+ },
+ {
+  "version": "1.12.1",
+  "date": "2026-05-08",
+  "highlights": [
+   "Match Settings row spacing to other iOS settings screens",
+   "Stop themed backgrounds from flickering between screens"
+  ]
+ },
+ {
+  "version": "1.12.0",
+  "date": "2026-05-08",
+  "highlights": [
+   "Tell you a bubble came from an older app version",
+   "Fix a pack that read 1 words instead of 1 word"
+  ]
+ },
+ {
+  "version": "1.11.0",
+  "date": "2026-05-07",
+  "highlights": [
+   "Give a rainbow theme in your first tip's thank-you",
+   "Swap soft gradients for hard-edged color bands",
+   "Label each pack row with a type icon and season"
+  ]
+ },
+ {
+  "version": "1.10.0",
+  "date": "2026-05-07",
+  "highlights": [
+   "Show the app version with its build number in Settings"
+  ]
+ },
+ {
+  "version": "1.9.0",
+  "date": "2026-05-06",
+  "highlights": [
+   "Add High Contrast Light and High Contrast Dark themes",
+   "Add haptic taps throughout the drawing and guessing screens",
+   "Show that an old bubble's round has expired"
+  ]
+ },
+ {
+  "version": "1.8.0",
+  "date": "2026-05-05",
+  "highlights": [
+   "Buy Space Race, the renamed Cosmos pack, in the Shop",
+   "Match color pack art between the Shop and the palette sheet",
+   "Show a coming-soon note instead of a blank Shop section",
+   "Keep your strokes smooth when you draw fast"
+  ]
+ },
+ {
+  "version": "1.7.3",
+  "date": "2026-05-05",
+  "highlights": [
+   "Keep the inkwell moving through many short strokes",
+   "Keep edge strokes from losing points on the canvas",
+   "Fix the Save button layout on iPad"
+  ]
+ },
+ {
+  "version": "1.7.2",
+  "date": "2026-05-05",
+  "highlights": [
+   "Shrink the extension to keyboard height after you reply",
+   "Hold New Game until your send is confirmed"
+  ]
+ },
+ {
+  "version": "1.7.1",
+  "date": "2026-05-05",
+  "highlights": [
+   "Center the letter tiles and buttons instead of drifting left"
+  ]
+ },
+ {
+  "version": "1.7.0",
+  "date": "2026-05-05",
+  "highlights": [
+   "Merge your wins and games played across iPhone and iPad",
+   "Show packs below the spotlight as one column of large cards",
+   "Wrap long answers onto more rows in the guessing grid"
+  ]
+ },
+ {
+  "version": "1.6.0",
+  "date": "2026-05-04",
+  "highlights": [
+   "Add four patterns to Shop's spotlight cards and pack detail headers",
+   "Name the pack a round came from on its bubble",
+   "Scale text to the largest accessibility sizes and let screens scroll",
+   "Hold a pack's row in the word-pack picker to open its detail",
+   "Fill your edited palette slot with the bought pack's first color"
+  ]
+ },
+ {
+  "version": "1.5.0",
+  "date": "2026-05-04",
+  "highlights": [
+   "Add unique artwork to the bubble for each state",
+   "Show longer rainbow confetti when you tip",
+   "Add a patterned texture to pack hero banners"
+  ]
+ },
+ {
+  "version": "1.4.0",
+  "date": "2026-05-03",
+  "highlights": [
+   "Show an Owned pill where the price used to sit",
+   "Reorganize the Shop into three tiers with tap-to-preview cards"
+  ]
+ },
+ {
+  "version": "1.3.0",
+  "date": "2026-05-03",
+  "highlights": [
+   "Open a new Shop with a detail page for every pack",
+   "Add a Share button to Results and to a saved favorite",
+   "Add a Tip Jar row to Settings"
+  ]
+ },
+ {
+  "version": "1.2.0",
+  "date": "2026-05-03",
+  "highlights": [
+   "Stop Favorites from saving a redrawn word twice"
+  ]
+ },
+ {
+  "version": "1.1.1",
+  "date": "2026-05-02",
+  "highlights": [
+   "Announce palette color hints as complete sentences in VoiceOver"
+  ]
+ },
+ {
+  "version": "1.1.0",
+  "date": "2026-05-02",
+  "highlights": [
+   "Pin seven colors under the canvas instead of nine slots",
+   "Recolor strokes on the canvas when you swap a color",
+   "Add two color packs, Classic and Show of Hands"
+  ]
+ },
+ {
+  "version": "1.0.1",
+  "date": "2026-05-01",
+  "highlights": [
+   "Alternate between two sets after one fresh set of three",
+   "Stop Shuffle and Clear from stealing nearby taps"
+  ]
+ }
+]

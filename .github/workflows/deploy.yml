@@ -49,7 +49,6 @@ jobs:
           BUSINESS_NAME: ${{ vars.BUSINESS_NAME }}
           BUSINESS_URL: ${{ vars.BUSINESS_URL }}
           SUPPORT_EMAIL: ${{ vars.SUPPORT_EMAIL }}
-          APP_STORE_URL: ${{ vars.APP_STORE_URL }}
 
       - uses: actions/upload-pages-artifact@v5
         with:
