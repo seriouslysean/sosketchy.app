@@ -31,7 +31,6 @@ export default defineConfig({
       BUSINESS_NAME: envField.string({ context: 'server', access: 'public', default: '' }),
       BUSINESS_URL: envField.string({ context: 'server', access: 'public', default: '' }),
       SUPPORT_EMAIL: envField.string({ context: 'server', access: 'public', default: '' }),
-      APP_STORE_URL: envField.string({ context: 'server', access: 'public', default: '' }),
     },
   },
 });

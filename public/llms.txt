@@ -1,10 +1,11 @@
 # So Sketchy
 
-> Landing page for So Sketchy, an upcoming iMessage game.
+> Landing page for So Sketchy, an iMessage game.
 
 ## About
 
-So Sketchy is an async draw-and-guess game for iMessage. The app is in development.
+So Sketchy is an async draw-and-guess game for iMessage, distributed on the App
+Store.
 
 ## Policy
 
