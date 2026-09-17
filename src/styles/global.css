@@ -313,6 +313,12 @@
     font-size: 0.9375rem;
   }
 
+  .doc__date {
+    color: var(--ink-muted);
+    font-size: 0.8125rem;
+    margin-block-start: -0.25rem;
+  }
+
   .doc__meta {
     color: var(--ink-muted);
     font-size: 0.8125rem;
