@@ -12,6 +12,9 @@ interface Props {
   description?: string;
   noindex?: boolean;
   referrer?: string;
+  prevUrl?: string;
+  nextUrl?: string;
+  collectionPage?: boolean;
   ogImage?: string;
   ogImageType?: string;
   ogImageWidth?: number;
@@ -36,6 +39,9 @@ const {
   description = defaultDescription,
   noindex = false,
   referrer = 'strict-origin-when-cross-origin',
+  prevUrl,
+  nextUrl,
+  collectionPage = false,
   ogImage: ogImagePath = defaultOgImage.src,
   ogImageType = 'image/png',
   ogImageWidth = defaultOgImage.attributes.width,
@@ -58,6 +64,8 @@ const ogImage = getFullUrl(ogImagePath);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {prevUrl && <link rel="prev" href={getFullUrl(prevUrl)} />}
+    {nextUrl && <link rel="next" href={getFullUrl(nextUrl)} />}
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <meta name="referrer" content={referrer} />
@@ -92,7 +100,9 @@ const ogImage = getFullUrl(ogImagePath);
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={ogImageAlt} />
 
-    <StructuredData />
+    <StructuredData
+      collectionPage={collectionPage ? { name: title, description, url: canonical } : undefined}
+    />
   </head>
   <body>
     <a class="skip" href="#main">Skip to content</a>
