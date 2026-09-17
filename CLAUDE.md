@@ -25,6 +25,7 @@ travels in iMessage URLs. The site must not leak it.
 - Single layout: `src/layouts/Base.astro`. Owns head, meta, OG, favicons.
 - JSON-LD: `src/components/StructuredData.astro`. New schemas go here.
 - `SITE_URL` env required. Build and dev fail without it.
+- Release notes: content collection in `src/content.config.ts` over `src/data/release-notes.json`. The app repo's release tool overwrites that file; never edit or move it.
 
 ## Deploy
 

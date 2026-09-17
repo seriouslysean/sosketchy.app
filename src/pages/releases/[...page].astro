@@ -1,0 +1,58 @@
+---
+import type { GetStaticPaths, Page } from 'astro';
+import Doc from '../../layouts/Doc.astro';
+import SiteLink from '../../components/SiteLink.astro';
+import { APP_NAME } from '../../utils/env';
+import { formatReleaseDate, getReleaseNotes, type ReleaseNote } from '../../utils/release-notes';
+
+export const getStaticPaths = (async ({ paginate }) =>
+  paginate(await getReleaseNotes(), { pageSize: 20 })) satisfies GetStaticPaths;
+
+interface Props {
+  page: Page<ReleaseNote>;
+}
+
+const { page } = Astro.props;
+
+const newest = page.data[0].version;
+const oldest = page.data[page.data.length - 1].version;
+const range = newest === oldest ? newest : `${newest} to ${oldest}`;
+
+const title = `Releases ${range}`;
+const description = page.currentPage === 1
+  ? `What changed in each ${APP_NAME} update, newest first. Latest release ${newest}.`
+  : `${APP_NAME} release notes, versions ${range}, page ${page.currentPage} of ${page.lastPage}.`;
+---
+
+<Doc
+  title={title}
+  description={description}
+  prevUrl={page.url.prev}
+  nextUrl={page.url.next}
+  collectionPage
+>
+  <header class="doc__header">
+    <h1>Releases</h1>
+    <p>What changed in each {APP_NAME} update, newest first.</p>
+  </header>
+
+  {page.data.map((note) => (
+    <section>
+      <h2>{note.version}</h2>
+      <p class="doc__date"><time datetime={note.date}>{formatReleaseDate(note.date)}</time></p>
+      <ul>
+        {note.highlights.map((highlight) => <li>{highlight}</li>)}
+      </ul>
+    </section>
+  ))}
+
+  <nav class="doc__pager" aria-label="Release notes pages">
+    <div>
+      {page.url.prev && <SiteLink href={page.url.prev} rel="prev">Newer releases</SiteLink>}
+    </div>
+    <p class="doc__meta">Page {page.currentPage} of {page.lastPage}</p>
+    <div class="doc__pager-end">
+      {page.url.next && <SiteLink href={page.url.next} rel="next">Older releases</SiteLink>}
+    </div>
+  </nav>
+</Doc>

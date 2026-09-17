@@ -1,19 +1,28 @@
-import notes from '../data/release-notes.json';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
-/// One shipped version, newest first.
-export interface ReleaseNote {
-  version: string;
-  date: string;
-  highlights: string[];
-}
+/// One shipped version.
+export type ReleaseNote = CollectionEntry<'releases'>['data'];
 
-// Mirrors SoSketchyMessagesExtension/Resources/release-notes.json in the app
-// repo, which the app bundles for its own Release Notes screen and which the
-// GitHub Releases and the App Store "What's New" text are both built from.
-// That repo is private, so the site cannot fetch it at build time: the app
-// repo's release step writes this copy instead, and the push deploys it. Never
-// hand-edited.
-export const releaseNotes: ReleaseNote[] = notes;
+/// Ascending, one numeric part at a time. Comparing versions as strings puts
+/// 3.9.0 above 3.10.0.
+const compareVersions = (a: string, b: string): number => {
+  const left = a.split('.').map(Number);
+  const right = b.split('.').map(Number);
+
+  for (let index = 0; index < Math.max(left.length, right.length); index += 1) {
+    const difference = (left[index] ?? 0) - (right[index] ?? 0);
+    if (difference !== 0) return difference;
+  }
+
+  return 0;
+};
+
+/// Newest first. Several versions can share a release date, so the version
+/// breaks the tie.
+export const getReleaseNotes = async (): Promise<ReleaseNote[]> =>
+  (await getCollection('releases'))
+    .map((entry) => entry.data)
+    .sort((a, b) => b.date.localeCompare(a.date) || compareVersions(b.version, a.version));
 
 /// Dates are bare calendar days. Parsing and formatting in UTC keeps the
 /// build runner's timezone from shifting one off by a day.

@@ -6,12 +6,21 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title?: string;
   description?: string;
+  prevUrl?: string;
+  nextUrl?: string;
+  collectionPage?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, prevUrl, nextUrl, collectionPage } = Astro.props;
 ---
 
-<Base title={title} description={description}>
+<Base
+  title={title}
+  description={description}
+  prevUrl={prevUrl}
+  nextUrl={nextUrl}
+  collectionPage={collectionPage}
+>
   <Header />
   <main id="main" class="doc-main">
     <article class="doc">

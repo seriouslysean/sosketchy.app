@@ -18,5 +18,5 @@ npm run dev
 - `/` home
 - `/privacy/` privacy policy
 - `/support/` support
-- `/releases/` release notes rendered from `src/data/release-notes.json`, pushed from the app repo's release tool
+- `/releases/` release notes rendered from `src/data/release-notes.json`, pushed from the app repo's release tool. 20 per page, continuing at `/releases/2/`
 - `/robots.txt`, `/sitemap-index.xml`, `/sitemap-0.xml` generated at build

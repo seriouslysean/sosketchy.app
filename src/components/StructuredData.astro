@@ -2,6 +2,12 @@
 import { APP_NAME, BUSINESS_NAME } from '../utils/env';
 import { getFullUrl } from '../utils/url-utils';
 
+interface Props {
+  collectionPage?: { name: string; description: string; url: string };
+}
+
+const { collectionPage } = Astro.props;
+
 const siteRoot = getFullUrl('/');
 
 const graph = {
@@ -31,6 +37,20 @@ const graph = {
       image: getFullUrl('/og-image.png'),
       creator: { '@id': `${siteRoot}#org` },
     },
+    ...(collectionPage
+      ? [
+          {
+            '@type': 'CollectionPage',
+            '@id': `${collectionPage.url}#page`,
+            url: collectionPage.url,
+            name: collectionPage.name,
+            description: collectionPage.description,
+            inLanguage: 'en',
+            isPartOf: { '@id': `${siteRoot}#site` },
+            about: { '@id': `${siteRoot}#app` },
+          },
+        ]
+      : []),
   ],
 };
 ---

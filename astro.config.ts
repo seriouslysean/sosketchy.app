@@ -31,6 +31,10 @@ export default defineConfig({
       BUSINESS_NAME: envField.string({ context: 'server', access: 'public', default: '' }),
       BUSINESS_URL: envField.string({ context: 'server', access: 'public', default: '' }),
       SUPPORT_EMAIL: envField.string({ context: 'server', access: 'public', default: '' }),
+      // Apple's numeric ID for the App Store listing. The default keeps the
+      // install links working when the APP_STORE_ID variable is unset; src/utils/env.ts
+      // treats an empty value the same way.
+      APP_STORE_ID: envField.string({ context: 'server', access: 'public', default: '6770168860' }),
     },
   },
 });
