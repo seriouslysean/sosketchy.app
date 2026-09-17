@@ -17,6 +17,8 @@ travels in iMessage URLs. The site must not leak it.
 ## Conventions
 
 - Vanilla CSS. Native nesting, `@layer`, logical properties.
+- Internal route URLs carry a trailing slash (`trailingSlash: 'always'`).
+- Extension-bearing files (favicons, manifest, sitemaps, OG image) and the robots.txt `Disallow` prefix carry no trailing slash. `Disallow: /g` must still match the query-string fallback `/g?state=...`.
 
 ## Architecture
 

@@ -16,6 +16,7 @@ npm run dev
 ## Pages
 
 - `/` home
-- `/privacy` privacy policy
-- `/support` support
-- `/robots.txt`, `/sitemap.xml` generated at build
+- `/privacy/` privacy policy
+- `/support/` support
+- `/releases/` release notes rendered from `src/data/release-notes.json`, pushed from the app repo's release tool
+- `/robots.txt`, `/sitemap-index.xml`, `/sitemap-0.xml` generated at build
