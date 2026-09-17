@@ -13,7 +13,7 @@ if (!site) {
 export default defineConfig({
   site,
   base,
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   devToolbar: { enabled: false },
   build: {
     inlineStylesheets: 'always',
