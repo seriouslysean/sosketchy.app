@@ -1,14 +1,20 @@
 ---
 import SiteLink from './SiteLink.astro';
+import AppStoreBadge from '../assets/app-store-badge.svg';
+import { copy } from '../i18n/copy';
 import { BUSINESS_NAME, BUSINESS_URL } from '../utils/env';
 import { APP_STORE_URL } from '../utils/links';
 
 const year = new Date().getFullYear();
+const badgeAlt = copy.common.downloadAppStore;
 ---
 
 <footer class="site-footer">
+  <SiteLink class="site-footer__badge" href={APP_STORE_URL} aria-label={badgeAlt}>
+    <AppStoreBadge aria-hidden="true" focusable="false" />
+  </SiteLink>
   <small>
-    <SiteLink href="/">Home</SiteLink> · <SiteLink href={APP_STORE_URL}>App Store</SiteLink> · <SiteLink href="/releases/">Releases</SiteLink> · <SiteLink href="/privacy/">Privacy</SiteLink> · <SiteLink href="/support/">Support</SiteLink>
+    <SiteLink href="/">Home</SiteLink> · <SiteLink href="/releases/">Releases</SiteLink> · <SiteLink href="/privacy/">Privacy</SiteLink> · <SiteLink href="/support/">Support</SiteLink>
   </small>
   <small>
     &copy; {year}{' '}
