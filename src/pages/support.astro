@@ -2,7 +2,6 @@
 import Doc from '../layouts/Doc.astro';
 import SiteLink from '../components/SiteLink.astro';
 import { APP_NAME, SUPPORT_EMAIL } from '../utils/env';
-import { APP_STORE_URL } from '../utils/links';
 ---
 
 <Doc
@@ -17,12 +16,7 @@ import { APP_STORE_URL } from '../utils/links';
   </header>
 
   <section>
-    <h2>Common actions</h2>
-
-    <h3>Get the app</h3>
-    <p>
-      {APP_NAME} is on the <SiteLink href={APP_STORE_URL}>App Store</SiteLink>.
-    </p>
+    <h2>How to</h2>
 
     <h3>Open the game</h3>
     <p>
@@ -32,7 +26,7 @@ import { APP_STORE_URL } from '../utils/links';
 
     <h3>Report a word</h3>
     <p>
-      While you are guessing, or on the results screen, tap Help and then
+      While you're guessing or on the results screen, tap Help and then
       Report a problem. The app asks whether to attach the drawing, then
       opens a pre-filled email you can send to us.
     </p>
@@ -40,13 +34,8 @@ import { APP_STORE_URL } from '../utils/links';
     <h3>Save to Photos</h3>
     <p>
       Tap Save Image to keep the drawing, or Save Replay to keep a video of
-      it being drawn. The app requests Photos access the first time. You can
-      change Photos access in iOS Settings.
-    </p>
-
-    <h3>Privacy</h3>
-    <p>
-      Details on data handling are in the <SiteLink href="/privacy/">privacy policy</SiteLink>.
+      it being drawn. The app asks for Photos access the first time, and
+      you can change that later in iOS Settings.
     </p>
   </section>
 </Doc>
