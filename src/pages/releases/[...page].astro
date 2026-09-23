@@ -40,6 +40,9 @@ const description = page.currentPage === 1
     <section>
       <h2>{note.version}</h2>
       <p class="doc__date"><time datetime={note.date}>{formatReleaseDate(note.date)}</time></p>
+      {note.appStore && (
+        <p class="doc__store">App Store · <time datetime={note.appStore}>{formatReleaseDate(note.appStore)}</time></p>
+      )}
       <ul>
         {note.highlights.map((highlight) => <li>{highlight}</li>)}
       </ul>
