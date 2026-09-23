@@ -18,10 +18,10 @@ const newest = page.data[0].version;
 const oldest = page.data[page.data.length - 1].version;
 const range = newest === oldest ? newest : `${newest} to ${oldest}`;
 
-const title = `Releases ${range}`;
+const title = `Version history ${range}`;
 const description = page.currentPage === 1
   ? `What changed in each ${APP_NAME} update, newest first, starting with ${newest}.`
-  : `${APP_NAME} release notes for versions ${range}, page ${page.currentPage} of ${page.lastPage}.`;
+  : `${APP_NAME} version history for versions ${range}, page ${page.currentPage} of ${page.lastPage}.`;
 ---
 
 <Doc
@@ -32,7 +32,7 @@ const description = page.currentPage === 1
   collectionPage
 >
   <header class="doc__header">
-    <h1>Releases</h1>
+    <h1>Version history</h1>
     <p>Here's what changed in each {APP_NAME} update, newest first.</p>
   </header>
 
