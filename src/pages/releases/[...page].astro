@@ -51,11 +51,11 @@ const description = page.currentPage === 1
 
   <nav class="doc__pager" aria-label="Release notes pages">
     <div>
-      {page.url.prev && <SiteLink href={page.url.prev} rel="prev">Newer releases</SiteLink>}
+      {page.url.prev && <SiteLink href={page.url.prev} rel="prev">Newer</SiteLink>}
     </div>
     <p class="doc__meta">Page {page.currentPage} of {page.lastPage}</p>
     <div class="doc__pager-end">
-      {page.url.next && <SiteLink href={page.url.next} rel="next">Older releases</SiteLink>}
+      {page.url.next && <SiteLink href={page.url.next} rel="next">Older</SiteLink>}
     </div>
   </nav>
 </Doc>
