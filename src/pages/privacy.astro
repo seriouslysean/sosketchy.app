@@ -9,7 +9,7 @@ const effectiveDateLabel = 'September 17, 2026';
 
 <Doc
   title="Privacy"
-  description={`How ${APP_NAME} handles data.`}
+  description={`How ${APP_NAME} handles your data and what you can do about it.`}
 >
   <header class="doc__header">
     <h1>Privacy</h1>
@@ -21,30 +21,33 @@ const effectiveDateLabel = 'September 17, 2026';
     <h2>Analytics</h2>
     <p>
       {APP_NAME} sends stats to <SiteLink href="https://telemetrydeck.com/privacy/" target="_blank" aria-label="TelemetryDeck privacy policy, opens in new tab">TelemetryDeck</SiteLink> only if you say yes when the app
-      first asks. The stats cover app use, purchases, crashes, performance,
-      errors, app and device details such as your device model, OS version,
-      region, and language, and a random ID for each install.
+      first asks. Those stats cover how you use the app and the purchases you
+      make, along with crashes, errors and performance. They also include app
+      and device details such as your device model, OS version, region and
+      language, and each install sends its own random ID with them.
     </p>
     <p>
-      You can change your answer in the app's settings. Turning stats off
-      stops anything more from being sent. Data already sent is kept with no
-      set deletion date. It isn't tied to your name, email or Apple Account, so
-      we can't pick out your past records to delete them. Reset Data in the app
-      gives this install a new random ID.
+      You can change your answer in the app's settings, and turning stats off
+      stops anything more from being sent. Anything that's already been sent
+      is kept with no set deletion date. Because it isn't tied to your name,
+      email or Apple Account, we can't pick out your past records to delete
+      them. Reset Data in the app does give this install a new random ID,
+      though.
     </p>
     <p>
-      TelemetryDeck must protect the data as required by this policy and Apple's
-      privacy rules.
+      TelemetryDeck has to protect that data the way this policy and Apple's
+      privacy rules require.
     </p>
   </section>
 
   <section>
     <h2>Your data</h2>
     <p>
-      If you want to delete the game's data, open Settings, then Privacy.
-      Reset Data (This Device) clears this device, while Reset Across All
-      Devices also clears iCloud, so your other devices clear too the next
-      time you open the app. Either reset gives that device a new analytics
+      If you want to delete the game's data, open Settings in the game and go
+      to Privacy. Reset Data (This Device) clears this device, while Reset
+      Across All Devices also clears iCloud, so each of your other devices
+      clears the next time you open the game on it. Either reset gives that
+      device a new analytics
       ID, but it doesn't delete analytics we've already received, and it
       never touches your purchases.
     </p>
@@ -54,15 +57,15 @@ const effectiveDateLabel = 'September 17, 2026';
     <h2>Content reports</h2>
     <p>
       Content reports go out by email from your own mail account, so a report
-      carries your email address. Each one includes the round ID, the word
-      pack, how many guesses were made, the app version and build, and the
-      reason you type. Once the word is revealed it goes in too. The
-      drawing is attached only if you choose to attach it when the app asks,
-      and you can send the report without it. Reports are used to review what
-      was reported.
+      carries your email address. Each one includes the reason you type,
+      along with the round ID, the word pack, how many guesses were made, and
+      the app version and build. Once the word has been revealed, the report
+      includes it too. The drawing is attached only if you say yes when the
+      app asks, and you're free to send the report without it. We use reports
+      to review what was reported.
     </p>
     <p>
-      Report emails are kept in the support inbox. To delete one, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address that sent it.
+      We keep report emails in the support inbox, and if you'd like one deleted, email <SiteLink href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</SiteLink> from the address that sent it.
     </p>
   </section>
 
@@ -75,7 +78,7 @@ const effectiveDateLabel = 'September 17, 2026';
 
   <section>
     <h2>Changes</h2>
-    <p>Important changes to this policy are posted here.</p>
+    <p>We'll post important changes to this policy here.</p>
   </section>
 
   <footer class="doc__meta">Effective <time datetime={effectiveDateISO}>{effectiveDateLabel}</time>.</footer>
