@@ -3,8 +3,8 @@
     "downloadAppStore": "Download on the App Store"
   },
   "site": {
-    "defaultDescription": "{appName} is a drawing game inside iMessage. Get a word, draw it, send it over, and your friend guesses whenever they pick up their phone.",
-    "defaultDescriptionFallback": "A drawing game inside iMessage. Get a word, draw it, send it over, and your friend guesses whenever they pick up their phone.",
+    "defaultDescription": "{appName} is a drawing game that lives inside iMessage. You draw a word and send it over, and your friend guesses it whenever they pick up their phone.",
+    "defaultDescriptionFallback": "A drawing game that lives inside iMessage. You draw a word and send it over, and your friend guesses it whenever they pick up their phone.",
     "defaultOgImageAlt": "{appName} drawing preview",
     "defaultOgImageAltFallback": "Drawing preview"
   },
