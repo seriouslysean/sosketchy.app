@@ -20,8 +20,8 @@ const range = newest === oldest ? newest : `${newest} to ${oldest}`;
 
 const title = `Releases ${range}`;
 const description = page.currentPage === 1
-  ? `What changed in each ${APP_NAME} update, newest first. Latest release ${newest}.`
-  : `${APP_NAME} release notes, versions ${range}, page ${page.currentPage} of ${page.lastPage}.`;
+  ? `What changed in each ${APP_NAME} update, newest first, starting with ${newest}.`
+  : `${APP_NAME} release notes for versions ${range}, page ${page.currentPage} of ${page.lastPage}.`;
 ---
 
 <Doc
@@ -33,7 +33,7 @@ const description = page.currentPage === 1
 >
   <header class="doc__header">
     <h1>Releases</h1>
-    <p>What changed in each {APP_NAME} update, newest first.</p>
+    <p>Here's what changed in each {APP_NAME} update, newest first.</p>
   </header>
 
   {page.data.map((note) => (
