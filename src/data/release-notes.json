@@ -1,5 +1,28 @@
 [
  {
+  "version": "3.4.0",
+  "date": "2026-10-02",
+  "highlights": [
+   "Keep an unsent drawing ready to send from the Main Menu",
+   "Add a Main Menu link below the Send prompt",
+   "Ask before a new game replaces a drawing you haven't sent",
+   "Group the guess letters so each word reads as one word",
+   "Move Reset and Shuffle next to Submit",
+   "Show a trash can for clearing the canvas",
+   "Keep drawings you remove from History from coming back",
+   "Give every theme its own description and rainbow letter colors",
+   "Stop VoiceOver repeating \"Double-tap to view\" on every bubble",
+   "Move Discard, I'm Stuck, Report and Block into a More menu",
+   "Show apostrophes and hyphens between the letter tiles",
+   "Split long words onto two lines on the result tiles",
+   "Show words like Jack-o'-Lantern and UFO in their usual spelling",
+   "Name buttons by their visible text for Voice Control",
+   "Give the mascot a blue-violet sky",
+   "Add Blueberry, a free blue-violet theme",
+   "Follow iOS Increase Contrast in every theme"
+  ]
+ },
+ {
   "version": "3.3.3",
   "date": "2026-09-16",
   "highlights": [
