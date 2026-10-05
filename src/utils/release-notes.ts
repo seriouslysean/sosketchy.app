@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-/// One shipped version.
+/// One version, App Store release or not.
 export type ReleaseNote = CollectionEntry<'releases'>['data'];
 
 /// Ascending, one numeric part at a time. Comparing versions as strings puts

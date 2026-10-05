@@ -18,10 +18,10 @@ const newest = page.data[0].version;
 const oldest = page.data[page.data.length - 1].version;
 const range = newest === oldest ? newest : `${newest} to ${oldest}`;
 
-const title = `Releases ${range}`;
+const title = `Version history ${range}`;
 const description = page.currentPage === 1
   ? `What changed in each ${APP_NAME} update, newest first, starting with ${newest}.`
-  : `${APP_NAME} release notes for versions ${range}, page ${page.currentPage} of ${page.lastPage}.`;
+  : `${APP_NAME} version history for versions ${range}, page ${page.currentPage} of ${page.lastPage}.`;
 ---
 
 <Doc
@@ -32,7 +32,7 @@ const description = page.currentPage === 1
   collectionPage
 >
   <header class="doc__header">
-    <h1>Releases</h1>
+    <h1>Version history</h1>
     <p>Here's what changed in each {APP_NAME} update, newest first.</p>
   </header>
 
@@ -40,19 +40,22 @@ const description = page.currentPage === 1
     <section>
       <h2>{note.version}</h2>
       <p class="doc__date"><time datetime={note.date}>{formatReleaseDate(note.date)}</time></p>
+      {note.appStore && (
+        <p class="doc__store">App Store · <time datetime={note.appStore}>{formatReleaseDate(note.appStore)}</time></p>
+      )}
       <ul>
         {note.highlights.map((highlight) => <li>{highlight}</li>)}
       </ul>
     </section>
   ))}
 
-  <nav class="doc__pager" aria-label="Release notes pages">
+  <nav class="doc__pager" aria-label="Version history pages">
     <div>
-      {page.url.prev && <SiteLink href={page.url.prev} rel="prev">Newer releases</SiteLink>}
+      {page.url.prev && <SiteLink href={page.url.prev} rel="prev">Newer</SiteLink>}
     </div>
     <p class="doc__meta">Page {page.currentPage} of {page.lastPage}</p>
     <div class="doc__pager-end">
-      {page.url.next && <SiteLink href={page.url.next} rel="next">Older releases</SiteLink>}
+      {page.url.next && <SiteLink href={page.url.next} rel="next">Older</SiteLink>}
     </div>
   </nav>
 </Doc>
