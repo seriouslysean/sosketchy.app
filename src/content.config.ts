@@ -4,7 +4,7 @@ import { z } from 'astro/zod';
 
 // src/data/release-notes.json mirrors
 // SoSketchyMessagesExtension/Resources/release-notes.json in the app repo,
-// which the app bundles for its own Release Notes screen and which the GitHub
+// which the app bundles for its own Version history screen and which the GitHub
 // Releases and the App Store "What's New" text are both built from. That repo
 // is private, so the site cannot fetch it at build time: the app repo's release
 // step overwrites this copy in place, and the push deploys it. Never
